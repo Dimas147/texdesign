@@ -1,0 +1,74 @@
+// Product Style
+.product{
+
+    .edit-product-btn{
+        position         : absolute;
+        left             : 0;
+        top              : 0;
+        background-color : @primary-bg;
+        color            : @primary-color;
+        padding          : 5px;
+    }
+    .product-image{
+        border  : 3px solid @gray-light;
+        display : block;
+
+        img{
+            width : 100%;
+        }
+    }
+    .product-name{ }
+
+    .product-price {}
+
+    .product-info {
+        .title {
+            font-weight: bold;
+        }
+    }
+
+    .product-description-short{
+        border-bottom : 1px solid @gray-light;
+        border-top    : 1px solid @gray-light;
+        padding       : 1em 0;
+    }
+
+    .product-description-full{ }
+
+    .product-options-listing{
+        margin-bottom : 1em;
+        overflow: hidden;
+
+        .product-option{
+            overflow : hidden;
+            margin-bottom: 1em;
+
+            & > label{
+                font-weight : bold;
+                width       : auto;
+                display: inline;
+            }
+
+            & > div label{
+                cursor       : pointer;
+                float        : left;
+                font-size    : 12px;
+                margin-right : 1%;
+                width        : 27%;
+            }
+
+            select{
+                padding : 2px;
+                width   : auto;
+            }
+        }
+    }
+
+    .tcart-add{
+        .button();
+        .user-select();
+        .box-shadow(none; @input-shadow-focus);
+        display: block;
+
+    }
+}
