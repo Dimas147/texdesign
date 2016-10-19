@@ -1,0 +1,6 @@
+1.5.2
+ - Fix dropdown menu on mobile
+ - Turn off bottom bar
+ - Change "Menu" to icon
+
+1.5.1

@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>{$plugin:widcard:BizOrgName:notag}</title>
+</head>
+<body style="margin:0;padding:0;">
+	<table border="0" bgcolor="#e9e2e5" cellpadding="10" cellspacing="0" width="100%" style="background-color:#e9e2e5;font-family:Arial, Helvetica, sans-serif; color:#000; font-size:14px; text-align:left;">
+		<tr>
+			<td style="" align="center">
+				<table border="0" cellpadding="0" cellspacing="0" width="700" bgcolor="#ffffff" style="margin: 0px auto; max-width:100%; background-color: #ffffff;">
+
+					<!-- Header, LOGO -->
+					<tr style="" bgcolor="">
+						<td style="padding:15px;" align="center">
+							<a target="_blank" href="{$website:url}" style="text-decoration:none; font-size:20px; color:#e31351;">
+								<img src="{$plugin:widcard:bizLogo:url}" alt="Tout Sweet Pâtisserie" height="48" width="190" style="vertical-align:middle;">
+							</a>
+						</td>
+					</tr>
+
+
+					<!-- Content -->
+					<tr style="">
+						<td style="padding:15px;" valign="top">
+							{emailmessage}
+						</td>
+					</tr>
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellpadding="5" cellspacing="0" bgcolor="#f8f8f8" style="background: #f8f8f8;font-size: 14px;">
+                                <tr>
+                                    <td width="15%" style="font-weight: bold; text-align: right;">Reg. date:</td>
+                                    <td width="35%">{user:regdate}</td>
+                                    <td width="15%" style="font-weight: bold; text-align: right;">User ID:</td>
+                                    <td width="35%">{user:id}</td>
+                                </tr>
+
+                                <tr>
+                                    <td width="15%" style="font-weight: bold; text-align: right;">Username:</td>
+                                    <td width="35%">{user:fullname} </td>
+                                    <td width="15%" style="font-weight: bold; text-align: right;">IP:</td>
+                                    <td width="35%">{user:ipaddress}</td>
+                                </tr>
+
+                                <tr>
+                                    <td width="15%" style="font-weight: bold; text-align: right;">E-mail:</td>
+                                    <td width="35%">{user:email}</td>
+                                    <td width="15%" style="font-weight: bold; text-align: right;">Where from:</td>
+                                    <td width="35%">{user:referer}</td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+					<!-- Footer -->
+					<tr style="" bgcolor="">
+						<td style="padding:15px 0; font-size:12px;text-align:center; border-top:1px solid #eee; color:#999;">
+							<address>{$plugin:widcard:BizOrgName:notag} | {$plugin:widcard:BizAddress1:notag}, {$plugin:widcard:BizCity:notag}, {$plugin:widcard:BizState:notag} {$plugin:widcard:BizZip:notag} | {$plugin:widcard:BizTelephone:notag}</address>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{$page:title}</title>
+</head>
+<body>
+<div id="main">
+    <h1><img class="logo" src="{$plugin:widcard:bizLogo:url}" alt="{$plugin:widcard:BizOrgName:notag}"></h1>
+    <div id="address">
+        <h3>{$plugin:widcard:BizOrgName:notag}</h3>
+        <p>{$plugin:widcard:BizAddress1:notag}</p>
+        <p>{$plugin:widcard:BizCity:notag}, {$plugin:widcard:BizState:notag} {$plugin:widcard:BizZip:notag}</p>
+        <p>{$plugin:widcard:BizEmail:notag}</p>
+    </div>
+    <div style="clear:both">
+        {postpurchasecode}
+        <div class="post-purchase">
+            <h3 class="post-purchase-report-customer-order-id">Order number # {$postpurchase:id}</h3>
+
+            <p class="createdOrderDate">{$postpurchase:Created}</p>
+
+            <div class="post-purchase-report-billing">
+                <h4 class="title">Billing Address:</h4>
+
+                <div class="post-purchase-report-billing-address">
+                    <div>{$postpurchase:billing:firstname} {$postpurchase:billing:lastname}</div>
+                    <div>{$postpurchase:billing:address1} {$postpurchase:billing:address2} </div>
+                    <div>{$postpurchase:billing:city} {$postpurchase:billing:state}, {$postpurchase:billing:zip}</div>
+                    <div>Phone: {$postpurchase:billing:mobile:clean}</div>
+                    <div>Email: {$postpurchase:billing:email}</div>
+                    <div>Payment Method : {$postpurchase:gateway}</div>
+                </div>
+            </div>
+
+            <div class="post-purchase-report-shipping">
+                <h4 class="title">{$postpurchase:shippingService}:</h4>
+                {postpurchasepickup}
+                <div>{$postpurchase:shipping:firstname} {$postpurchase:shipping:lastname}</div>
+                <div>Phone: {$postpurchase:shipping:mobile:clean}</div>
+                <h4 class="title">Pickup location</h4>
+                <div>{$postpurchase:pickup:name} </div>
+                <div>Phone: {$postpurchase:pickup:mobile:clean}</div>
+                <div>{$postpurchase:pickup:address1} {$postpurchase:pickup:address2}</div>
+                <div>{$postpurchase:pickup:city}, {$postpurchase:pickup:state} {$postpurchase:pickup:zip} </div>
+
+                <div class="location-working-hours">
+                    <div>{$postpurchase:pickup:working_hours:sunday:label:Sunday}</div>
+                    <div>{$postpurchase:pickup:working_hours:monday:label:Monday}</div>
+                    <div>{$postpurchase:pickup:working_hours:tuesday:label:Tuesday}</div>
+                    <div>{$postpurchase:pickup:working_hours:wednesday:label:Wednesday}</div>
+                    <div>{$postpurchase:pickup:working_hours:thursday:label:Thursday}</div>
+                    <div>{$postpurchase:pickup:working_hours:friday:label:Friday}</div>
+                    <div>{$postpurchase:pickup:working_hours:saturday:label:Saturday}</div>
+                </div>
+                <a href="{$postpurchase:pickup:map_link}" target="_blank">
+                    <img class="pickup-location-map" src="{$postpurchase:pickup:map_src}" alt="" width="400" height="200">
+                </a>
+                {/postpurchasepickup}
+
+                {postpurchaseshipping}
+                <div class="post-purchase-report-shipping-address">
+                    <div>{$postpurchase:shipping:firstname} {$postpurchase:shipping:lastname}</div>
+                    <div>{$postpurchase:shipping:address1} {$postpurchase:shipping:address2}</div>
+                    <div>{$postpurchase:shipping:city} {$postpurchase:shipping:state}, {$postpurchase:shipping:zip}</div>
+                    <div>Phone: {$postpurchase:shipping:mobile:clean}</div>
+                    <div>Email: {$postpurchase:shipping:email}</div>
+                </div>
+                {/postpurchaseshipping}
+            </div>
+            <div style="clear:both"></div>
+            <table class="post-purchase-report cart-content">
+                <thead>
+                <tr>
+                    <th class="product-info" colspan="2">Product</th>
+                    <th class="product-unit-price">Price</th>
+                    <th class="product-qty">Qty</th>
+                    <th class="product-total">Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                {postpurchasecartcontent:email}
+
+                <tr>
+                    <td class="product-img">
+                        {$postpurchase:cartitem:photo:product}
+                    </td>
+                    <td class="product-info">
+                        <span class="post-purchase-report-product-name">{$postpurchase:cartitem:name}</span>
+                        <div class="options">{$postpurchase:cartitem:options:cleanOptionPrice}</div>
+                    </td>
+                    <td class="product-unit-price">{$postpurchase:cartitem:price}</td>
+                    <td class="product-qty">{$postpurchase:cartitem:qty}</td>
+                    <td class="product-total">{$postpurchase:cartitem:total} </td>
+                </tr>
+                {/postpurchasecartcontent}
+                </tbody>
+            </table>
+            <div class="post-purchase-report-summary">
+                <h3 class="summary-title">Summary</h3>
+
+                <div class="post-purchase-row cart-subtotal">
+                    <div>Sub-Total:</div>
+                    <div class="text-right">{$postpurchase:subTotal}</div>
+                </div>
+                <div class="post-purchase-row cart-discount">
+                    <div>Discount:</div>
+                    <div class="text-right">{$postpurchase:discount}</div>
+                </div>
+                <div class="post-purchase-row cart-shipping">
+                    <div>Shipping:</div>
+                    <div class="text-right">{$postpurchase:shippingPrice}</div>
+                </div>
+                <div class="post-purchase-row cart-total-tax">
+                    <div>Total Tax:</div>
+                    <div class="text-right">{$postpurchase:totalTax}</div>
+                </div>
+                <div class="post-purchase-row cart-total">
+                    <div>Total: </div>
+                    <div class="text-right">{$postpurchase:total}</div>
+                </div>
+            </div>
+
+        </div>
+        {/postpurchasecode}
+    </div>
+</div>
+
+<style>
+    * { padding: 0; margin: 0; }
+    body {
+        background-color: #fff;
+        font: 14px Arial, Verdana, Sans-serif;
+    }
+    h1 { margin:0; float: left; width: 40%; }
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    img {
+        max-width: 95px;
+        max-height: 95px;
+        vertical-align: middle;
+    }
+    img.pickup-location-map {
+        max-width:500px !important;
+        max-height:300px !important;
+    }
+    img.logo {
+        max-width:300px !important;
+        max-height:300px !important;
+    }
+    a {
+        text-decoration: none;
+    }
+    p:empty, span:empty {display:none;}
+    #address {
+        color: #333;
+        float: right;
+        width: 50%;
+        text-align: right;
+
+    }
+    #address h3 {
+        color: #111;
+        margin: 0;
+        font-size: 15px;
+        padding: 0;
+    }
+    .post-purchase h3.post-purchase-report-customer-order-id {
+        color: #111;
+        font-size: 22px;
+        font-weight: bold;
+        margin: 20px 0 0;
+        padding: 0;
+    }
+    .createdOrderDate {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    table.cart-content {
+        border: none;
+        width: 100%;
+        overflow: hidden;
+        background-color: transparent;
+        border-collapse: separate;
+        border-spacing: 0 11px;
+        margin:0;
+    }
+
+
+    table.cart-content th {
+        background-color: #eee;
+        padding: 12px 10px 0;
+        text-align: center;
+    }
+    table.cart-content td {
+        border-bottom: 1px solid #EEE;
+        padding: 5px 10px;
+        text-align: center;
+    }
+    table.cart-content th.product-info, table.cart-content td.product-info {
+        text-align: left;
+    }
+    .post-purchase .post-purchase-report-shipping,
+    .post-purchase .post-purchase-report-billing {
+        float: left;
+        width: 50%;
+        margin: 0 0 15px;
+        overflow: hidden;
+    }
+    .post-purchase .post-purchase-report-shipping h4,
+    .post-purchase .post-purchase-report-billing h4 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+    /* summary */
+    .post-purchase-report-summary {
+        float: right;
+        width: 25%;
+        margin:0;
+    }
+
+    .post-purchase-report-summary .summary-title {
+        padding: 3px 10px;
+        margin: 0;
+        background:#eee;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .post-purchase-report-summary .summary-title div {
+        width: 50%;
+        text-align: right;
+    }
+    .post-purchase-report-summary .post-purchase-row {
+        padding: 3px 10px;
+        overflow: hidden;
+    }
+    .post-purchase-report-summary .post-purchase-row div {
+        float: left;
+        display: block;
+        min-width: 50%;
+        width: 50%;
+        text-align: right;
+    }
+    .post-purchase .post-purchase-report-summary div.cart-total {
+        padding: 5px 10px;
+        font-weight: bold;
+        border-bottom: 1px solid #EEE;
+    }
+
+</style>
+</body>
+</html>

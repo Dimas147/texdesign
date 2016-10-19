@@ -1,0 +1,183 @@
+<html>
+<head>
+  <title>{$plugin:widcard:BizOrgName:notag}</title>
+</head>
+<body style="margin:0;padding:0;">
+	<table border="0" bgcolor="#e9e2e5" cellpadding="10" cellspacing="0" width="100%" style="background-color:#e9e2e5;font-family:Arial, Helvetica, sans-serif; color:#000; font-size:14px; text-align:left;">
+		<tr>
+			<td style="" align="center">
+				<table border="0" cellpadding="0" cellspacing="0" width="700" bgcolor="#ffffff" style="margin: 0px auto; max-width:100%; background-color: #ffffff;">
+
+					<!-- Header, LOGO -->
+					<tr style="" bgcolor="">
+						<td style="padding:15px;" align="center">
+							<a target="_blank" href="{$website:url}" style="text-decoration:none; font-size:20px; color:#e31351;">
+								<img src="{$plugin:widcard:bizLogo:url}" alt="Tout Sweet Pâtisserie" height="48" width="190" style="vertical-align:middle;">
+							</a>
+						</td>
+					</tr>
+
+
+					<!-- Content -->
+					<tr style="">
+						<td style="padding:15px;" valign="top">
+							{emailmessage}
+							{postpurchasecode}
+							<table width="100%" border="0" style="border:none; margin-bottom:15px;">
+								<thead>
+								<tr>
+									<th width="50%" align="left">
+										<span style="font-weight:bold; color:#222222">Billing Address:</span>
+									</th>
+									<th width="50%" align="left">
+										<span style="font-weight:bold; color:#222222">{$postpurchase:shippingService}:</span>
+									</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td valign="top">
+										<div style="color:#444444; font-family: arial;">
+											<span>{$postpurchase:billing:firstname}</span>
+											<span>{$postpurchase:billing:lastname}</span>
+											<br>
+											<span>{$postpurchase:billing:address1} </span>
+											<span>{$postpurchase:billing:address2} </span>
+											<br>
+											<span>{$postpurchase:billing:city}</span>
+											<span>{$postpurchase:billing:state},</span>
+											<span>{$postpurchase:billing:zip}</span>
+											<br>
+											<span>Phone: {$postpurchase:billing:mobile:clean}</span>
+											<br>
+											<span>Email: {$postpurchase:billing:email}</span>
+											<br>
+											<span>Payment Method : {$postpurchase:gateway}</span>
+										</div>
+									</td>
+									<td valign="top">
+										<div style="color:#444444; font-family: arial;">
+											{postpurchasepickup}
+												<span>{$postpurchase:shipping:firstname}</span>
+												<span>{$postpurchase:shipping:lastname}</span><br>
+												<span>Phone: {$postpurchase:shipping:mobile:clean}</span>
+
+												<h4 style="font-weight:bold; color:#222222; margin-top: 20px; margin-bottom: 0; font-size: 14px;">Pickup location</h4>
+												{$postpurchase:pickup:name} <br>
+												Phone: {$postpurchase:pickup:mobile:clean}<br>
+												{$postpurchase:pickup:address1}, {$postpurchase:pickup:address2}<br>
+												{$postpurchase:pickup:city}, {$postpurchase:pickup:state} {$postpurchase:pickup:zip} <br>
+												<div class="location-working-hours">
+													<div>{$postpurchase:pickup:working_hours:sunday:label:Sunday}</div>
+													<div>{$postpurchase:pickup:working_hours:monday:label:Monday}</div>
+													<div>{$postpurchase:pickup:working_hours:tuesday:label:Tuesday}</div>
+													<div>{$postpurchase:pickup:working_hours:wednesday:label:Wednesday}</div>
+													<div>{$postpurchase:pickup:working_hours:thursday:label:Thursday}</div>
+													<div>{$postpurchase:pickup:working_hours:friday:label:Friday}</div>
+													<div>{$postpurchase:pickup:working_hours:saturday:label:Saturday}</div>
+												</div>
+												<a href="{$postpurchase:pickup:map_link}" target="_blank">
+													<img class="pickup-location-map" src="{$postpurchase:pickup:map_src}" alt="" width="400" height="200">
+												</a>
+											{/postpurchasepickup}
+
+											{postpurchaseshipping}
+												<div class="post-purchase-report-shipping-address">
+													<span>{$postpurchase:shipping:firstname}</span>
+													<span>{$postpurchase:shipping:lastname}</span>
+													<br>
+													<span>{$postpurchase:shipping:address1}</span>
+													<span>{$postpurchase:shipping:address2}</span>
+													<br>
+													<span>{$postpurchase:shipping:city}</span>
+													<span>{$postpurchase:shipping:state},</span>
+													<span>{$postpurchase:shipping:zip}</span>
+													<br>
+													<span>Phone: {$postpurchase:shipping:mobile:clean}</span>
+													<br/>
+													<span>Email: {$postpurchase:shipping:email}</span>
+												</div>
+											{/postpurchaseshipping}
+										</div>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+
+							<table width="100%" style="margin-bottom:15px; border:1px solid #dddddd;">
+								<thead>
+								<tr style="background:#ddd;">
+									<th align="left" colspan="2" style="padding:5px;">Product</th>
+									<th align="center" style="padding:5px;">Price</th>
+									<th align="center" style="padding:5px;">Qty</th>
+									<th align="center" style="padding:5px;">Total</th>
+								</tr>
+								</thead>
+								<tbody>
+								{postpurchasecartcontent:email}
+								<tr>
+									<td align="left" valign="middle">
+										{$postpurchase:cartitem:photo:product}
+									</td>
+									<td align="left" valign="middle">
+										<span class="post-purchase-report-product-name" style="display:block; margin-bottom:5px; font-weight:bold;">{$postpurchase:cartitem:name}</span>
+										<div class="options">{$postpurchase:cartitem:options:cleanOptionPrice}</div>
+									</td>
+									<td valign="middle" align="center">
+										{$postpurchase:cartitem:price}
+									</td>
+									<td valign="middle" align="center">{$postpurchase:cartitem:qty}</td>
+									<td valign="middle" align="center">
+										{$postpurchase:cartitem:total}
+									</td>
+								</tr>
+								{/postpurchasecartcontent}
+								</tbody>
+							</table>
+
+							<table width="100%" border="0" style="border:none;">
+								<thead>
+								<tr>
+									<th width="70%">&nbsp;</th>
+									<th width="15%" align="right"><span style="font-weight:bold;color:#222222;">Summary:</span></th>
+									<th width="15%">&nbsp;</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr style="border-bottom: 1px solid #ddd; color: #444444; font-family: arial;">
+									<td align="left">&nbsp;</td>
+									<td align="right">Sub-Total:</td>
+									<td align="right">{$postpurchase:subTotal}</td>
+								</tr>
+								<tr style="border-bottom: 1px solid #ddd; color: #444444; font-family: arial;">
+									<td align="left">&nbsp;</td>
+									<td align="right">Discount: </td>
+									<td align="right">{$postpurchase:discount}</td>
+								</tr>
+								<tr style="border-bottom: 1px solid #ddd; color: #444444; font-family: arial;">
+									<td align="left">&nbsp;</td>
+									<td align="right">Shipping: </td>
+									<td align="right">{$postpurchase:shippingPrice}</td>
+								</tr>
+								<tr style="border-bottom: 1px solid #ddd; color: #444444; font-family: arial;">
+									<td align="left">&nbsp;</td>
+									<td align="right">Total Tax: </td>
+									<td align="right">{$postpurchase:totalTax}</td>
+								</tr>
+								<tr style="border-bottom: 1px solid #ddd; color: #444444; font-family: arial;">
+									<td align="left">&nbsp;</td>
+									<td align="right">Total: </td>
+									<td align="right">{$postpurchase:total}</td>
+								</tr>
+								</tbody>
+							</table>
+							{/postpurchasecode}
+						</td>
+					</tr>
+
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

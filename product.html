@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body>
+
+    <!-- Container -->
+    <div id="page" class="container">
+
+        <!-- Include header template -->
+        {$template:_header}
+
+        <section class="clearfix product" itemscope="" itemtype="http://schema.org/Product">
+
+            <h1 class="grid_12 product-name" role="heading" itemprop="name">{$product:name}</h1>
+
+            <article class="grid_5 t-grid_3">
+                {$product:editproduct}
+                <a class="_lbox product-image" href="{$product:photourl:original}">
+                    <img itemprop="image" src="{$product:photourl:medium}" alt="{$product:name}"/>
+                </a>
+                <p class="h3">{$header:product-gallery:static}</p>
+                {$content:product-gallery}
+                <ul class="list-unstyled list-bordered product-info mt20px">
+                    <li><span class="title">Weight:</span> {$product:weight}</li>
+                    <li>
+                        <div itemprop="brand" itemscope itemtype="http://schema.org/Organization">
+                            <span class="title">Brand: </span>
+                            <span itemprop="name">{$product:brand}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">Product ID: </span><span itemprop="productID">{$product:id}</span>
+                    </li>
+                    <li>
+                        <span class="title">SKU code:</span> {$product:sku}
+                    </li>
+                    <li>
+                        <span class="title">MPN code:</span> {$product:mpn}
+                    </li>
+                    <li>
+                        <span class="title">Product tags:</span> {$product:tags}
+                    </li>
+                </ul>
+            </article>
+
+            <article class="grid_7 t-grid_3" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                <div class="mb15px clearfix">
+                    <span itemprop="priceCurrency" content="{$plugin:shopping:currency}"></span>
+                    <span itemprop="price" content="{$product:price:nocurrency}" class="product-price grid_6 alpha h2">{$product:price}</span>
+                    <input id="productquantity" class="grid_2 t-grid_2 m-grid_1 t-alpha m-alpha " type="text" name="productquantity-{$product:id}" value="1"/>
+                    <div class="grid_4 t-grid_4 m-grid_3 t-omega m-omega omega text-center">{$store:addtocart:{$product:id}}</div>
+                </div>
+                <div class="product-options">
+                    {$product:options}
+                </div>
+                <p class="product-description-short" itemprop="description">{$product:description}</p>
+
+                <div class="tabs mt20px mb20px">
+                    <ul class="list-unstyled list-inline">
+                        <li><a href="#tabs-1">{$header:tab1:static}</a></li>
+                        <li><a href="#tabs-2">{$header:tab2:static}</a></li>
+                        <li><a href="#tabs-3">{$header:tab3:static}</a></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <p class="product-description-full" itemprop="description">{$product:description:full}</p>
+                    </div>
+                    <div id="tabs-2">
+                        {$product:related}
+                    </div>
+                    <div id="tabs-3">
+                        {$quote:form}
+                    </div>
+                </div>
+            </article>
+            <article class="grid_12">{$productlist:_products list:sametags}</article>
+        </section>
+
+        <!-- Footer -->
+        <!-- Include Footer template -->
+        {$template:_footer}
+    </div>
+
+    <!-- Include mobile elements template -->
+    {$template:_mobile elements}
+
+    <!-- Include scripts template -->
+    {$template:_scripts}
+    </body>
+</html>

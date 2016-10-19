@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body class="cart">
+
+<!-- Include header template -->
+{$template:_header}
+
+<!-- Content box-->
+<section id="content" class="container mt20px mb20px" role="main">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>{$page:title}</title>
+    </head>
+    <body>
+    <div id="main">
+
+        <div id="address" class="fl-right text-right">
+            <h3>{$plugin:widcard:BizOrgName:notag}</h3>
+            <p>{$plugin:widcard:BizAddress1:notag}<br/>
+                {$plugin:widcard:BizCity:notag}, {$plugin:widcard:BizState:notag} {$plugin:widcard:BizZip:notag}<br/>
+                {$plugin:widcard:BizEmail:notag}</p>
+        </div>
+        <div style="clear:both">
+            {postpurchasecode}
+            <div class="post-purchase">
+                <h3 class="post-purchase-report-customer-order-id">Order number # {$postpurchase:id}</h3>
+
+                <p class="createdOrderDate">{$postpurchase:Created}</p>
+
+                <div class="post-purchase-report-billing">
+                    <h4 class="title">Billing Address:</h4>
+
+                    <div class="post-purchase-report-billing-address">
+                        <span>{$postpurchase:billing:firstname}</span>
+                        <span>{$postpurchase:billing:lastname}</span>
+                        <br>
+                        <span>{$postpurchase:billing:address1} </span>
+                        <span>{$postpurchase:billing:address2} </span>
+                        <br/>
+                        <span>{$postpurchase:billing:city}</span>
+                        <span>{$postpurchase:billing:state},</span>
+                        <span>{$postpurchase:billing:zip}</span>
+                        <br/>
+                        <span>Phone: {$postpurchase:billing:mobile:clean}</span>
+                        <br/>
+                        <span>Email: {$postpurchase:billing:email}</span>
+                        <br>
+                        <span>Payment Method : {$postpurchase:gateway}</span>
+                    </div>
+                </div>
+
+                <div class="post-purchase-report-shipping">
+                    <h4 class="title">{$postpurchase:shippingService}:</h4>
+                    {postpurchasepickup}
+                    <span>{$postpurchase:shipping:firstname}</span>
+                    <span>{$postpurchase:shipping:lastname}</span><br/>
+                    <span>Phone: {$postpurchase:shipping:mobile:clean}</span>
+                    <h4 class="title mt20px">Pickup location</h4>
+                    {$postpurchase:pickup:name} <br/>
+                    Phone: {$postpurchase:pickup:mobile:clean}<br/>
+                    {$postpurchase:pickup:address1} {$postpurchase:pickup:address2}<br/>
+                    {$postpurchase:pickup:city}, {$postpurchase:pickup:state} {$postpurchase:pickup:zip} <br/>
+
+                    <div class="location-working-hours">
+                        <div>{$postpurchase:pickup:working_hours:sunday:label:Sunday}</div>
+                        <div>{$postpurchase:pickup:working_hours:monday:label:Monday}</div>
+                        <div>{$postpurchase:pickup:working_hours:tuesday:label:Tuesday}</div>
+                        <div>{$postpurchase:pickup:working_hours:wednesday:label:Wednesday}</div>
+                        <div>{$postpurchase:pickup:working_hours:thursday:label:Thursday}</div>
+                        <div>{$postpurchase:pickup:working_hours:friday:label:Friday}</div>
+                        <div>{$postpurchase:pickup:working_hours:saturday:label:Saturday}</div>
+                    </div>
+                    <a href="{$postpurchase:pickup:map_link}" target="_blank">
+                        <img class="pickup-location-map" src="{$postpurchase:pickup:map_src}" alt="" width="400" height="200">
+                    </a>
+                    {/postpurchasepickup}
+
+                    {postpurchaseshipping}
+                    <div class="post-purchase-report-shipping-address">
+                        <span>{$postpurchase:shipping:firstname}</span>
+                        <span>{$postpurchase:shipping:lastname}</span>
+                        <br>
+                        <span>{$postpurchase:shipping:address1}</span>
+                        <span>{$postpurchase:shipping:address2}</span>
+                        <br/>
+                        <span>{$postpurchase:shipping:city}</span>
+                        <span>{$postpurchase:shipping:state},</span>
+                        <span>{$postpurchase:shipping:zip}</span>
+                        <br>
+                        <span>Phone: {$postpurchase:shipping:mobile:clean}</span>
+                        <br/>
+                        <span>Email: {$postpurchase:shipping:email}</span>
+                    </div>
+                    {/postpurchaseshipping}
+                </div>
+                <div style="clear:both"></div>
+                <table class="post-purchase-report cart-content">
+                    <thead>
+                    <tr>
+                        <th class="product-info" colspan="2">Product</th>
+                        <th class="product-unit-price">Price</th>
+                        <th class="product-qty">Qty</th>
+                        <th class="product-total">Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {postpurchasecartcontent}
+
+                    <tr>
+                        <td class="product-img">
+                            {$postpurchase:cartitem:photo:product}
+                        </td>
+                        <td class="product-info">
+                            <span class="post-purchase-report-product-name">{$postpurchase:cartitem:name}</span>
+                            <div class="options">{$postpurchase:cartitem:options:cleanOptionPrice}</div>
+                        </td>
+                        <td class="product-unit-price">{$postpurchase:cartitem:price}</td>
+                        <td class="product-qty">{$postpurchase:cartitem:qty}</td>
+                        <td class="product-total">{$postpurchase:cartitem:total} </td>
+                    </tr>
+                    {/postpurchasecartcontent}
+                    </tbody>
+                </table>
+                <div class="post-purchase-report-summary">
+                    <h3 class="summary-title">Summary</h3>
+
+                    <div class="post-purchase-row cart-subtotal">
+                        <span>Sub-Total:</span>
+                        <span class="text-right">{$postpurchase:subTotal}</span>
+                    </div>
+                    <div class="post-purchase-row cart-discount">
+                        <span>Discount:</span>
+                        <span class="text-right">{$postpurchase:discount}</span>
+                    </div>
+                    <div class="post-purchase-row cart-shipping">
+                        <span>Shipping:</span>
+                        <span class="text-right">{$postpurchase:shippingPrice}</span>
+                    </div>
+                    <div class="post-purchase-row cart-total-tax">
+                        <span>Total Tax:</span>
+                        <span class="text-right">{$postpurchase:totalTax}</span>
+                    </div>
+                    <div class="post-purchase-row cart-total">
+                        <span>Total: </span>
+                        <span class="text-right">{$postpurchase:total}</span>
+                    </div>
+                </div>
+
+            </div>
+            {/postpurchasecode}
+        </div>
+    </div>
+
+    </body>
+    </html>
+</section>
+
+<!-- Footer -->
+<!-- Include Footer template -->
+{$template:_footer}
+{postpurchasecode}
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-57701880-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_addTrans',
+        '{$postpurchase:id}', // transaction ID - required
+        '{$postpurchase:config:company}', // affiliation or store name
+        '{$postpurchase:subtotal:clean:withouttax}', // total - required
+        '{$postpurchase:totalTax:clean}', // tax
+        '{$postpurchase:shippingPrice:clean}', // shipping
+        '{$postpurchase:shipping:city}', // city
+        '{$postpurchase:shipping:state}', // state or province
+        '{$postpurchase:shipping:country:clean}' // country
+    ]);
+
+    // add item might be called for every item in the shopping cart
+    // where your ecommerce engine loops through each item in the cart and
+    // prints out _addItem for each
+    {postpurchasecartcontent:analytics}
+    _gaq.push(['_addItem',
+        '{$postpurchase:cartitem:cartId}', // transaction ID - required
+        '{$postpurchase:cartitem:sku}', // SKU/code - required
+        '{$postpurchase:cartitem:name}', // product name
+        '', // category or variation optional
+        '{$postpurchase:cartitem:price:clean}', // unit price - required
+        '{$postpurchase:cartitem:qty}' // quantity - required
+    ]);
+
+    {/postpurchasecartcontent}
+
+    _gaq.push(['_trackTrans']); //submits transaction to the Analytics servers
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+{/postpurchasecode}
+</body>
+</html>
