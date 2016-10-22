@@ -1,8 +1,15 @@
 //	PAGE Style
 //==================================================
+html when (@widget-rotator-full-height) {
+    height: 100%;
+}
+
 body {
     // custom scroll-bar
     .scroll-bar();
+    & when (@widget-rotator-full-height) {
+        height: 100%;
+    }
 }
 
 main {
@@ -14,15 +21,23 @@ main {
 //	HEADER Style
 //==================================================
 header {
-    background : @header-bg;
-    color      : @header-color;
+    background: @header-bg;
+    color: @header-color;
 
     // -- LOGO Style
     .logo {
-        text-decoration : none;
+        text-decoration: none;
+        margin: 0;
+
+        a{
+            .inline-block();
+        }
 
         img {
         }
+    }
+    .index-page &{
+        height: 100%;
     }
 }
 
@@ -42,17 +57,17 @@ section {
 //==================================================
 aside {
     .aside-box {
-        margin-bottom : 30px;
+        margin-bottom: 30px;
     }
 }
 
 //	FOOTER Style
 //==================================================
 footer {
-    padding    : @padding-larger-vertical * 2 0;
-    background : @footer-bg;
-    color      : @footer-color;
-    font-size  : @font-size-small;
+    padding: @padding-larger-vertical * 2 0;
+    background: @footer-bg;
+    color: @footer-color;
+    font-size: @font-size-small;
 }
 
 //	Button to scroll top

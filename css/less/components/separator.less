@@ -71,3 +71,25 @@ hr {
         border-top-style : dotted;
     }
 }
+
+.divider{
+    display: block;
+    padding: 0;
+    width: 275px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    color: transparent;
+    background-color: transparent;
+    margin: 10px auto;
+    &::before{
+        content: '';
+        top: 50%;
+        left: 50%;
+        .translate(-50%, -50%);
+        position: absolute;
+        width: 95px;
+        border-bottom: 3px solid;
+        color: @primary-color;
+        z-index: 5;
+    }
+}

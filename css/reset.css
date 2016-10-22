@@ -1,6 +1,6 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-size: 14px;
+  font-size: 20px;
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
   -ms-text-size-adjust: 100%;
@@ -205,11 +205,11 @@ th {
 }
 ::-moz-selection {
   background: #50514f;
-  color: #ffffff;
+  color: #FFF;
 }
 ::selection {
   background: #50514f;
-  color: #ffffff;
+  color: #FFF;
 }
 blockquote,
 q {
@@ -281,7 +281,7 @@ iframe {
 [contenteditable="true"] {
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #bbbbbb;
   cursor: text;
   padding: 2px 6px;

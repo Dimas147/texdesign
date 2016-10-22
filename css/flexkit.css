@@ -25,7 +25,7 @@
   min-width: 100%;
 }
 .carousel .carousel-wrap .carousel-item {
-  font-size: 14px;
+  font-size: 20px;
   display: inline-block;
   vertical-align: top;
 }
@@ -41,7 +41,7 @@
   margin: auto;
   width: 3em;
   display: none;
-  font-size: 14px;
+  font-size: 20px;
 }
 .carousel .carousel-btn::before {
   font-family: flexkit-icons;
@@ -140,27 +140,27 @@
 }
 .smoke-base .dialog-buttons button {
   font-size: 12px;
-  color: #ffffff;
+  color: #FFF;
   border-color: #189b1a;
   background-color: #4fc752;
 }
 .smoke-base .dialog-buttons button:hover,
 .smoke-base .dialog-buttons button:active,
 .smoke-base .dialog-buttons button.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #126f13;
   background-color: #37ac3a;
 }
 .smoke-base .dialog-buttons button.cancel {
   margin-right: .5em;
-  color: #ffffff;
+  color: #FFF;
   border-color: #e62321;
   background-color: #f25f5c;
 }
 .smoke-base .dialog-buttons button.cancel:hover,
 .smoke-base .dialog-buttons button.cancel:active,
 .smoke-base .dialog-buttons button.cancel.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #be1816;
   background-color: #ee312d;
 }

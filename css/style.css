@@ -1,9 +1,23 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
 header {
   background: transparent;
   color: #555555;
 }
 header .logo {
   text-decoration: none;
+  margin: 0;
+}
+header .logo a {
+  display: inline-block;
+  vertical-align: middle;
+}
+.index-page header {
+  height: 100%;
 }
 aside .aside-box {
   margin-bottom: 30px;
@@ -15,14 +29,14 @@ footer {
   font-size: 0.85em;
 }
 #go-top {
-  color: #ffffff;
+  color: #FFFFFF;
   border-color: rgba(0, 0, 0, 0.5);
   background-color: rgba(0, 0, 0, 0.5);
 }
 #go-top:hover,
 #go-top:active,
 #go-top.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #50514f;
   background-color: #50514f;
 }
@@ -56,7 +70,7 @@ form .captcha .captcha_image a {
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #ffffff;
+  color: #FFF;
   border-color: #191a18;
   background-color: #50514f;
   -webkit-user-select: none;
@@ -79,7 +93,7 @@ form .captcha .recaptcha_links a:active,
 form .captcha .captcha_image a:active,
 form .captcha .recaptcha_links a.active,
 form .captcha .captcha_image a.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #000000;
   background-color: #373736;
 }
@@ -226,7 +240,7 @@ textarea,
 input {
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   border: 1px solid #bbbbbb;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #2f2f2f;
   transition: border 0.3s;
 }
@@ -332,7 +346,7 @@ textarea.resize {
 .forgot-password,
 .retrieveFormBlock > form + a {
   float: left;
-  margin-top: -27px;
+  margin-top: -42px;
 }
 .filed-upgrade {
   height: auto;
@@ -354,7 +368,7 @@ textarea.resize {
   width: calc(1em + 1px * 2);
   line-height: 0;
   margin: 0;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #bbbbbb;
   color: transparent;
 }
@@ -401,7 +415,7 @@ textarea.resize {
   line-height: 1.25em;
 }
 .filed-upgrade[type="checkbox"].switcher ~ .checkbox_radio::before {
-  font-size: 0.857rem;
+  font-size: 0.6rem;
   line-height: inherit;
   content: 'OFF';
   background: none;
@@ -420,7 +434,7 @@ textarea.resize {
   transition: all 0.3s;
   background: rgba(0, 0, 0, 0.1);
   position: absolute;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   z-index: 1;
   left: 0;
   top: 0;
@@ -516,7 +530,7 @@ textarea.resize {
   margin: 0;
   line-height: 1.5;
   padding: 4px;
-  color: #ffffff;
+  color: #FFF;
   text-align: center;
   font-size: 0.85em;
   white-space: nowrap;
@@ -527,11 +541,11 @@ textarea.resize {
 .rotator {
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: #FFFFFF;
 }
 .rotator .slide-description {
   padding: 10px 16px;
-  color: #FFF;
+  color: #FFFFFF;
   background: rgba(0, 0, 0, 0.005);
 }
 .rotator img {
@@ -543,13 +557,24 @@ textarea.resize {
   bottom: 0;
   left: 0;
 }
+.cycle-slideshow {
+  overflow: hidden;
+  height: 100%;
+}
+.cycle-slideshow > .tpopup {
+  position: relative;
+}
 .cycle-slideshow .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   list-style: none;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cycle-slideshow .slide .img {
+  height: 100%;
+  width: 100%;
 }
 .cycle-slideshow .slide > a.generator-links:not(:first-child),
 .cycle-slideshow .slide > a.tpopup:not(:first-child) {
@@ -571,8 +596,8 @@ textarea.resize {
   vertical-align: middle;
   cursor: pointer;
   margin: 0 3px;
-  color: #ffffff;
-  background: #FFF;
+  color: #FFF;
+  background: #FFFFFF;
   border-radius: 14px;
   width: 10px;
   height: 10px;
@@ -587,15 +612,15 @@ textarea.resize {
 }
 .cycle-slideshow .cycle-pager > *.cycle-pager-active {
   cursor: default;
-  color: #ffffff;
+  color: #FFF;
   background: #50514f;
 }
 .cycle-slideshow [class*="cycle-"].action-button {
   background: #50514f;
-  color: #ffffff;
+  color: #FFF;
   position: absolute;
   top: 50%;
-  z-index: 20;
+  z-index: 101;
   cursor: pointer;
   margin-top: -19px;
   padding: 10px;
@@ -611,7 +636,7 @@ textarea.resize {
 }
 .cycle-slideshow [class*="cycle-"].action-button:hover {
   background: #373736;
-  color: #ffffff;
+  color: #FFF;
 }
 .cycle-slideshow [class*="cycle-"].action-button::before {
   font-family: flexkit-icons;
@@ -701,7 +726,7 @@ html.tablet .mobile-loader::before {
   content: "";
   display: block;
   border: 5px solid transparent;
-  border-top-color: #ffffff;
+  border-top-color: #FFF;
   position: absolute;
   left: 0;
   right: 0;
@@ -786,7 +811,7 @@ html.tablet.loaded .mobile-loader {
   a::after {
     color: #888888;
     margin: 0 0 0 .5em;
-    font-size: 14px;
+    font-size: 20px;
     font-style: italic;
     text-decoration: underline;
   }
