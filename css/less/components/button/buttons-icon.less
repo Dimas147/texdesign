@@ -7,16 +7,18 @@
     }
 
     &.icon {
-        overflow    : hidden;
-        padding     : 0;
-        white-space : nowrap;
-        width       : unit(@button-line-height * 2, em);
+        @media only screen and (max-width : @responsive-size-tablet) {
+            overflow    : hidden;
+            padding     : 0;
+            white-space : nowrap;
+            width       : unit(@button-line-height * 2, em);
 
-        &::before {
-            width       : 100%;
-            float       : left;
-            margin      : 0;
-            line-height : inherit !important;
+            &::before {
+                width       : 100%;
+                float       : left;
+                margin      : 0;
+                line-height : inherit !important;
+            }
         }
     }
 

@@ -91,9 +91,9 @@
   box-shadow: 0 0 0 transparent;
 }
 .smoke-base .dialog.primary .dialog-inner {
-  color: #2b2b2a;
-  border-color: #8b8b8a;
-  background-color: #d1d1d0;
+  color: #000000;
+  border-color: #555555;
+  background-color: #bbbbbb;
 }
 .smoke-base .dialog.success .dialog-inner {
   color: #2a6a2c;
@@ -125,7 +125,7 @@
 .smoke-base .dialog-inner {
   overflow: auto;
   margin-top: 15%;
-  max-width: 720px;
+  max-width: 900px;
   max-height: 70%;
   font-size: 1.25em;
   padding: 1em 2em;
@@ -140,27 +140,27 @@
 }
 .smoke-base .dialog-buttons button {
   font-size: 12px;
-  color: #FFF;
+  color: #FFFFFF;
   border-color: #189b1a;
-  background-color: #4fc752;
+  background-color: #4FC752;
 }
 .smoke-base .dialog-buttons button:hover,
 .smoke-base .dialog-buttons button:active,
 .smoke-base .dialog-buttons button.active {
-  color: #FFF;
+  color: #FFFFFF;
   border-color: #126f13;
   background-color: #37ac3a;
 }
 .smoke-base .dialog-buttons button.cancel {
   margin-right: .5em;
-  color: #FFF;
+  color: #FFFFFF;
   border-color: #e62321;
-  background-color: #f25f5c;
+  background-color: #F25F5C;
 }
 .smoke-base .dialog-buttons button.cancel:hover,
 .smoke-base .dialog-buttons button.cancel:active,
 .smoke-base .dialog-buttons button.cancel.active {
-  color: #FFF;
+  color: #FFFFFF;
   border-color: #be1816;
   background-color: #ee312d;
 }
@@ -255,7 +255,7 @@ a.tooltip {
 }
 .dataTables_paginate .paginate_button.current {
   font-weight: bold;
-  background: #aeb6a5;
+  background: #947d7d;
   color: #fff;
 }
 .dataTables_paginate .paginate_button.first::before,

@@ -138,3 +138,22 @@
     }
 }
 
+.slide-text{
+    margin-top: 49vh;
+    color: @primary-color;
+    .slogan-top{
+        text-transform: uppercase;
+        margin-bottom: 0;
+        color: inherit;
+        & + .slogan-bottom{
+            margin-top: 0.5em;
+        }
+        &.animated{
+            .animation-delay(0.3s);
+        }
+    }
+    .slogan-bottom{
+        margin-bottom: 0;
+    }
+}
+

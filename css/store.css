@@ -2,8 +2,8 @@
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #50514f;
-  color: #FFF;
+  background-color: #000000;
+  color: #FFFFFF;
   padding: 5px;
 }
 .product .product-image {
@@ -52,12 +52,12 @@
   height: auto;
   line-height: 2.3em;
   padding: 0 1em;
-  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFF;
-  border-color: #191a18;
-  background-color: #50514f;
+  color: #FFFFFF;
+  border-color: #000000;
+  background-color: #000000;
   border: none;
   transition: background 0.3s;
   -webkit-user-select: none;
@@ -70,9 +70,9 @@
 .product .tcart-add:hover,
 .product .tcart-add:active,
 .product .tcart-add.active {
-  color: #FFF;
+  color: #FFFFFF;
   border-color: #000000;
-  background-color: #373736;
+  background-color: #000000;
 }
 .product .tcart-add:active,
 .product .tcart-add.active {
@@ -102,7 +102,7 @@
   display: block;
   margin: 0 0 0.25em;
   font-size: 1.25em;
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, serif;
+  font-family: Montserrat, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, serif;
 }
 .product-item .product-price {
   font-weight: bold;
@@ -115,12 +115,12 @@
   height: auto;
   line-height: 2.3em;
   padding: 0 1em;
-  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFF;
-  border-color: #191a18;
-  background-color: #50514f;
+  color: #FFFFFF;
+  border-color: #000000;
+  background-color: #000000;
   border: none;
   transition: background 0.3s;
   -webkit-user-select: none;
@@ -132,9 +132,9 @@
 .product-item .tcart-add:hover,
 .product-item .tcart-add:active,
 .product-item .tcart-add.active {
-  color: #FFF;
+  color: #FFFFFF;
   border-color: #000000;
-  background-color: #373736;
+  background-color: #000000;
 }
 .product-item .tcart-add:active,
 .product-item .tcart-add.active {
@@ -208,8 +208,8 @@
 .quote-summary-row select,
 .post-purchase-row select {
   width: 50%;
-  height: 1.5em;
-  line-height: 1.5;
+  height: 1.6em;
+  line-height: 1.6;
   padding: 0;
 }
 .cart-summary-row.cart-total,
@@ -219,7 +219,7 @@
   font-size: 1.1em;
 }
 #checkout-widget-preview .checkout-edit {
-  color: #f25f5c;
+  color: #F25F5C;
   float: right;
   font-size: 12px;
   font-weight: normal;
@@ -421,21 +421,21 @@
   font-size: 1.2em;
   display: block;
   line-height: 1;
-  background: #50514f;
-  color: #FFF;
+  background: #000000;
+  color: #FFFFFF;
 }
 .olark div {
   height: 0;
   padding: 7px 10px;
-  background: #FFF;
-  color: #555555;
+  background: #FFFFFF;
+  color: #646768;
   transition: all 0.3s;
 }
 .olark:hover {
   bottom: 0;
 }
 .olark:hover a.title {
-  background: #373736;
+  background: #000000;
 }
 .olark:hover div {
   height: auto;
@@ -634,13 +634,13 @@
   width: auto;
 }
 #shipper-select .shipping-methods li input:checked ~ .checkbox_radio {
-  border-color: #4fc752;
+  border-color: #4FC752;
 }
 #shipper-select .shipping-methods li input:checked ~ .checkbox_radio:before {
-  background: #4fc752;
+  background: #4FC752;
 }
 #shipper-select .shipping-methods li input:checked ~ .shipping-price:after {
-  border-color: #4fc752;
+  border-color: #4FC752;
 }
 #shipper-select .shipping-methods li .checkbox_radio {
   margin: -5px 5px 0 0;
@@ -675,7 +675,7 @@
 }
 #shipper-select .shipping-methods li input:checked + .checkbox_radio {
   display: block;
-  border-color: transparent #4fc752 #4fc752 transparent;
+  border-color: transparent #4FC752 #4FC752 transparent;
   height: 0;
   width: 0;
   border-width: 15px;
@@ -716,7 +716,7 @@
 #payment-zone form.paymentForm h4 {
   font-size: 26px;
   color: #222222;
-  font-weight: bold;
+  font-weight: 400;
   border-bottom: 1px solid #bbbbbb;
   padding: 0 0 0.25em;
   margin: 0 0 0.5em;
@@ -782,7 +782,7 @@
 #payment-zone form.payment-button legend {
   font-size: 25px;
   color: #222222;
-  font-weight: bold;
+  font-weight: 400;
   border-bottom: 1px solid #bbbbbb;
   padding: 0 0 0.25em;
   margin: 0 0 0.5em;
@@ -1012,12 +1012,12 @@
   height: auto;
   line-height: 2.3em;
   padding: 0 1em;
-  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFF;
-  border-color: #191a18;
-  background-color: #50514f;
+  color: #FFFFFF;
+  border-color: #000000;
+  background-color: #000000;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1030,9 +1030,9 @@
 #user-grid-part ul.user-stats li:hover,
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {
-  color: #FFF;
+  color: #FFFFFF;
   border-color: #000000;
-  background-color: #373736;
+  background-color: #000000;
 }
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {

@@ -17,16 +17,12 @@
 .main_menu {
   position: relative;
   z-index: 11;
-  background: #50514f;
-  color: #FFF;
+  background: #000000;
+  color: #FFFFFF;
 }
 .main_menu > li {
   float: left;
   position: relative;
-}
-.main_menu > li:hover,
-.main_menu a.current {
-  background: #373736;
 }
 .main_menu > li:hover ul {
   display: block;
@@ -44,7 +40,7 @@
   z-index: 0;
   display: none;
   width: 300px;
-  background: #FFF;
+  background: #FFFFFF;
   color: #888888;
   box-shadow: 0 3px 5px #555555;
 }
@@ -161,12 +157,12 @@ aside .relatedpages li p {
   text-align: right;
 }
 .news-item .news-item-date {
-  color: #7c7c7c;
+  color: #8a8d8f;
 }
 .news-item .news-item-date::before {
   top: 2px;
   font-size: 16px;
-  color: #50514f;
+  color: #000000;
 }
 .news-item .news-item-tags a {
   color: #888888;
@@ -235,8 +231,8 @@ aside .relatedpages li p {
 .mobile-bar.top {
   top: 0;
   line-height: 2.3em;
-  color: #FFF;
-  background: #50514f;
+  color: #FFFFFF;
+  background: #000000;
 }
 .mobile-bar.top .btn.icon {
   width: 2.3em;
@@ -253,7 +249,7 @@ aside .relatedpages li p {
   z-index: 0;
   overflow: auto;
   background: #fff;
-  color: #555555;
+  color: #646768;
 }
 .mobile-menu.left,
 .mobile-menu.right {
@@ -320,10 +316,6 @@ aside .relatedpages li p {
   float: none;
   border-bottom: 1px solid #eeeeee;
 }
-.mobile-menu li:hover,
-.dropdown-menu li:hover {
-  background: transparent;
-}
 .mobile-menu li:hover ul,
 .dropdown-menu li:hover ul {
   display: none;
@@ -372,7 +364,7 @@ aside .relatedpages li p {
   float: right;
   width: 2.3em;
   text-align: center;
-  color: #FFF;
+  color: #FFFFFF;
   background: rgba(0, 0, 0, 0.1);
 }
 .sub-menu-btn::before {
@@ -461,7 +453,7 @@ aside .relatedpages li p {
 .dropdown-menu,
 [data-dropdown-open] .dropdown-menu-mobile {
   background: #fff !important;
-  color: #555555 !important;
+  color: #646768 !important;
   position: absolute;
   z-index: 102 !important;
   width: 250px;

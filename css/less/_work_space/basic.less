@@ -21,6 +21,7 @@ main {
 //	HEADER Style
 //==================================================
 header {
+    position: relative;
     background: @header-bg;
     color: @header-color;
 
@@ -28,17 +29,37 @@ header {
     .logo {
         text-decoration: none;
         margin: 0;
-
-        a{
-            .inline-block();
+        text-align: center;
+        line-height: 0.7;
+        a {
+            color: @primary-color;
+            display: block;
+            text-decoration: none;
+            &:hover{
+                color: inherit;
+            }
+            span {
+                color: @primary-color;
+                display: inherit;
+            }
         }
 
         img {
         }
     }
-    .index-page &{
+    .index-page & {
         height: 100%;
     }
+}
+
+.header-top{
+    position: absolute;
+    padding-top: 31vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    z-index: 101;
 }
 
 // -- NAV Style

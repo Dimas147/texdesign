@@ -73,23 +73,29 @@ hr {
 }
 
 .divider{
+    text-align: center;
     display: block;
-    padding: 0;
-    width: 275px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
-    color: transparent;
-    background-color: transparent;
-    margin: 10px auto;
-    &::before{
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    min-width: 17rem;
+    &::before, &::after{
         content: '';
-        top: 50%;
+        bottom: -(0.2rem / 2);
         left: 50%;
-        .translate(-50%, -50%);
+        .translate(-50%, 0);
         position: absolute;
-        width: 95px;
-        border-bottom: 3px solid;
-        color: @primary-color;
-        z-index: 5;
+        width: 5rem;
+        border-bottom: 0.2rem solid @brand-primary;
+    }
+    &::before{
+        bottom: 0;
+        width: 15rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    header &{
+        &::after{
+            border-color: @primary-color;
+        }
     }
 }
