@@ -1,34 +1,48 @@
 .img_gallery when (@image-gallery) {
-    margin    : 10px 0;
-    font-size : 0;
+    margin-top: 2.7rem;
+    .inline-block-wrap();
 
     li {
-        font-size  : 1rem;
-        position   : relative;
-        margin     : 5px;
-        text-align : center;
-        .inline-block(middle);
+        .grid-elements(2; @grid-margin-width; true; 1; 1);
+        margin-bottom: 1.5rem;
     }
 
     a {
+        position: relative;
         img {
-            .thumbnail-state();
+            width: 100%;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            .transition();
+        }
+        &:hover{
+            &::before{
+                .rgba(#000000; 30%);
+            }
         }
     }
 
     .image_caption {
-        position    : absolute;
-        bottom      : 0;
-        left        : 0;
-        right       : 0;
-        z-index     : 10;
-        margin      : 0;
-        line-height : @line-height;
-        padding     : @padding-small-vertical;
-        color       : @thumbnail-caption-color;
-        text-align  : center;
-        font-size   : @font-size-small;
-        .text-overflow;
-        .rgba(@thumbnail-caption-bg; @thumbnail-caption-opacity);
+        margin-bottom: 0;
+        background: @brand-primary;
+        color: @primary-color;
+        text-decoration: none;
+        padding: 0.7em;
+        font-weight: 700;
+        line-height: 1;
+        font-family: @font-family-headings;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        .text-overflow();
+        .transition();
+        @media only screen and (min-width : @responsive-size-tablet) {
+            margin-right: 25%;
+        }
     }
 }

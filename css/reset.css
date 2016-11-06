@@ -205,12 +205,12 @@ th {
   box-sizing: border-box;
 }
 ::-moz-selection {
-  background: #000000;
-  color: #FFFFFF;
+  background: #ff2934;
+  color: #FFF;
 }
 ::selection {
-  background: #000000;
-  color: #FFFFFF;
+  background: #ff2934;
+  color: #FFF;
 }
 blockquote,
 q {
@@ -282,7 +282,7 @@ iframe {
 [contenteditable="true"] {
   display: inline-block;
   vertical-align: middle;
-  background: #FFFFFF;
+  background: #fff;
   border: 1px solid #bbbbbb;
   cursor: text;
   padding: 2px 6px;
@@ -363,6 +363,17 @@ select optgroup {
   font-size: inherit;
   font-family: inherit;
 }
+.main_menu,
+.listpages,
+.listcategories,
+.featureditem,
+.featureapage,
+.search-results,
+.relatedpages,
+.listxrss,
+.related-products {
+  font-size: 0;
+}
 .main_menu::after,
 .listpages::after,
 .listcategories::after,
@@ -375,6 +386,19 @@ select optgroup {
   content: "";
   display: table;
   clear: both;
+}
+.main_menu >*,
+.listpages >*,
+.listcategories >*,
+.featureditem >*,
+.featureapage >*,
+.search-results >*,
+.relatedpages >*,
+.listxrss >*,
+.related-products >* {
+  font-size: 20px;
+  display: inline-block;
+  vertical-align: middle;
 }
 ::i-block-chrome,
 .main_menu,

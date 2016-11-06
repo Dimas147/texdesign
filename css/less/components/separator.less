@@ -76,8 +76,8 @@ hr {
     text-align: center;
     display: block;
     position: relative;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
     min-width: 17rem;
     &::before, &::after{
         content: '';
@@ -93,9 +93,37 @@ hr {
         width: 15rem;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
-    header &{
+    &.white{
+        &::before{
+            border-color: rgba(255, 255, 255, 0.2);
+        }
         &::after{
             border-color: @primary-color;
+        }
+    }
+    &.inverse{
+        &::after{
+            border-color: #000000;
+        }
+    }
+    &.top{
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        margin-bottom: auto;
+        padding-bottom: auto;
+        &::before{
+            top: 0;
+            bottom: auto;
+        }
+        &::after{
+            top: -(0.2rem / 2);
+            bottom: auto;
+        }
+        a{
+            text-transform: uppercase;
+            font-family: @font-family-headings;
+            font-size: 0.85em;
+            font-weight: 700;
         }
     }
 }

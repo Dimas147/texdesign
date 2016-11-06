@@ -2,8 +2,8 @@
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #ff2934;
+  color: #FFF;
   padding: 5px;
 }
 .product .product-image {
@@ -55,9 +55,9 @@
   font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFFFFF;
-  border-color: #000000;
-  background-color: #000000;
+  color: #FFF;
+  border-color: #ff070b;
+  background-color: #ff2934;
   border: none;
   transition: background 0.3s;
   -webkit-user-select: none;
@@ -70,9 +70,9 @@
 .product .tcart-add:hover,
 .product .tcart-add:active,
 .product .tcart-add.active {
-  color: #FFFFFF;
-  border-color: #000000;
-  background-color: #000000;
+  color: #FFF;
+  border-color: #d30003;
+  background-color: #f5000d;
 }
 .product .tcart-add:active,
 .product .tcart-add.active {
@@ -118,9 +118,9 @@
   font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFFFFF;
-  border-color: #000000;
-  background-color: #000000;
+  color: #FFF;
+  border-color: #ff070b;
+  background-color: #ff2934;
   border: none;
   transition: background 0.3s;
   -webkit-user-select: none;
@@ -132,9 +132,9 @@
 .product-item .tcart-add:hover,
 .product-item .tcart-add:active,
 .product-item .tcart-add.active {
-  color: #FFFFFF;
-  border-color: #000000;
-  background-color: #000000;
+  color: #FFF;
+  border-color: #d30003;
+  background-color: #f5000d;
 }
 .product-item .tcart-add:active,
 .product-item .tcart-add.active {
@@ -219,7 +219,7 @@
   font-size: 1.1em;
 }
 #checkout-widget-preview .checkout-edit {
-  color: #F25F5C;
+  color: #f25f5c;
   float: right;
   font-size: 12px;
   font-weight: normal;
@@ -421,13 +421,13 @@
   font-size: 1.2em;
   display: block;
   line-height: 1;
-  background: #000000;
-  color: #FFFFFF;
+  background: #ff2934;
+  color: #FFF;
 }
 .olark div {
   height: 0;
   padding: 7px 10px;
-  background: #FFFFFF;
+  background: #FFF;
   color: #646768;
   transition: all 0.3s;
 }
@@ -435,7 +435,7 @@
   bottom: 0;
 }
 .olark:hover a.title {
-  background: #000000;
+  background: #f5000d;
 }
 .olark:hover div {
   height: auto;
@@ -634,13 +634,13 @@
   width: auto;
 }
 #shipper-select .shipping-methods li input:checked ~ .checkbox_radio {
-  border-color: #4FC752;
+  border-color: #4fc752;
 }
 #shipper-select .shipping-methods li input:checked ~ .checkbox_radio:before {
-  background: #4FC752;
+  background: #4fc752;
 }
 #shipper-select .shipping-methods li input:checked ~ .shipping-price:after {
-  border-color: #4FC752;
+  border-color: #4fc752;
 }
 #shipper-select .shipping-methods li .checkbox_radio {
   margin: -5px 5px 0 0;
@@ -675,7 +675,7 @@
 }
 #shipper-select .shipping-methods li input:checked + .checkbox_radio {
   display: block;
-  border-color: transparent #4FC752 #4FC752 transparent;
+  border-color: transparent #4fc752 #4fc752 transparent;
   height: 0;
   width: 0;
   border-width: 15px;
@@ -1015,9 +1015,9 @@
   font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFFFFF;
-  border-color: #000000;
-  background-color: #000000;
+  color: #FFF;
+  border-color: #ff070b;
+  background-color: #ff2934;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1030,9 +1030,9 @@
 #user-grid-part ul.user-stats li:hover,
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {
-  color: #FFFFFF;
-  border-color: #000000;
-  background-color: #000000;
+  color: #FFF;
+  border-color: #d30003;
+  background-color: #f5000d;
 }
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {

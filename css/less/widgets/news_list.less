@@ -1,47 +1,91 @@
-.news-item when (@widget-news-list){
-
-    .news-item-image{
-        img{ }
+.news-item when (@widget-news-list) {
+    & > * {
+        display: block;
     }
 
-    .news-item-title{ }
-
-    .newslog-admin-actions{
-        text-align : right;
-        a{ }
-    }
-
-    .news-item-date{
-        color : lighten(@text-color, 15%);
-
-        &::before{
-            top       : 2px;
-            font-size : 16px;
-            color     : @primary-bg;
+    .news-item-image {
+        position: relative;
+        img {
+            width: 100%;
         }
-    }
-
-    .news-item-description{ }
-
-    .news-item-tags{
-
-        a{
-            .link-color(@gray);
-
-            & + a{
-                margin-left : 0.5em;
-            }
-
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            .transition();
+        }
+        &:hover{
             &::before{
-                color        : @gray;
-                margin-right : 0.5em;
+                .rgba(#000000; 30%);
             }
         }
     }
 
-    .newslog-tag-filter{
+    .news-item-title {
+    }
+
+    .newslog-admin-actions {
+        a {
+        }
+    }
+
+    .news-item-date {
+
+    }
+
+    .news-item-description {
+    }
+
+    .news-item-tags {
+
+        a {
+
+        }
+    }
+
+    .newslog-tag-filter {
+
+    }
+}
+
+.news-container {
+    margin-top: 2.7rem;
+    .inline-block-wrap();
+    .news-item {
+        .grid-elements(2; @grid-margin-width; true; 1; 1);
+        margin-bottom: 1.5rem;
+    }
+    .news-item-title {
+        background: @brand-primary;
+        color: @primary-color;
+        text-decoration: none;
+        padding: 0.7em;
+        font-weight: 700;
+        line-height: 1;
+        font-family: @font-family-headings;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        .text-overflow();
+        .transition();
+        &:hover {
+            color: #000000;
+        }
+        @media only screen and (min-width : @responsive-size-tablet) {
+            margin-right: 25%;
+        }
+    }
+    .news-item-date {
+        margin-top: 0.5em;
+        font-size: 0.75em;
+        font-weight: bold;
         &::before{
-            content : "\e02f";
+            font-weight: bold;
+            padding-right: 0.5em;
+            margin-top: -0.25em;
+
         }
     }
 }

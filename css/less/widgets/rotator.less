@@ -29,7 +29,7 @@
         height: 100%;
     }
 
-    & > .tpopup{
+    & > .tpopup {
         position: relative;
     }
 
@@ -61,28 +61,44 @@
         position: absolute;
         top: 5px;
         right: 0;
-        z-index: 20;
+        z-index: 101;
         text-align: center;
         font-size: 0;
         line-height: 0;
 
         > * {
-            .inline-block;
             cursor: pointer;
-            margin: 0 3px;
-            color: @primary-color;
-            background: #FFFFFF;
-            .border-radius(14px);
-            .icon-size(10px; true);
-
-            &:hover {
-                background: darken(@primary-bg, 10%);
+            margin: 0 0.7rem;
+            .inline-block;
+            .border-radius(50%);
+            .icon-size(16px; true);
+            .transition();
+            &::before {
+                content: "";
+                background: @primary-color;
+                .icon-size(6px; true);
+                .inline-block;
+                .border-radius(50%);
             }
 
-            &.cycle-pager-active {
-                cursor: default;
-                color: @primary-color;
-                background: @primary-bg;
+            &:hover, &.cycle-pager-active {
+                background: @primary-color;
+            }
+        }
+        .index-page & {
+            top: auto;
+            bottom: 2.5rem;
+            left: 0;
+            right: 0;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 15rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                .translate(-50%, -50%);
+                z-index: -1;
             }
         }
     }
@@ -138,21 +154,21 @@
     }
 }
 
-.slide-text{
-    margin-top: 49vh;
+.slide-text {
+    margin-top: 50vh;
     color: @primary-color;
-    .slogan-top{
+    .slogan-top {
         text-transform: uppercase;
         margin-bottom: 0;
         color: inherit;
-        & + .slogan-bottom{
+        & + .slogan-bottom {
             margin-top: 0.5em;
         }
-        &.animated{
+        &.animated {
             .animation-delay(0.3s);
         }
     }
-    .slogan-bottom{
+    .slogan-bottom {
         margin-bottom: 0;
     }
 }

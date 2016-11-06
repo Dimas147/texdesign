@@ -91,9 +91,9 @@
   box-shadow: 0 0 0 transparent;
 }
 .smoke-base .dialog.primary .dialog-inner {
-  color: #000000;
-  border-color: #555555;
-  background-color: #bbbbbb;
+  color: #88161c;
+  border-color: #ff7178;
+  background-color: #ffc6c9;
 }
 .smoke-base .dialog.success .dialog-inner {
   color: #2a6a2c;
@@ -140,27 +140,27 @@
 }
 .smoke-base .dialog-buttons button {
   font-size: 12px;
-  color: #FFFFFF;
+  color: #FFF;
   border-color: #189b1a;
-  background-color: #4FC752;
+  background-color: #4fc752;
 }
 .smoke-base .dialog-buttons button:hover,
 .smoke-base .dialog-buttons button:active,
 .smoke-base .dialog-buttons button.active {
-  color: #FFFFFF;
+  color: #FFF;
   border-color: #126f13;
   background-color: #37ac3a;
 }
 .smoke-base .dialog-buttons button.cancel {
   margin-right: .5em;
-  color: #FFFFFF;
+  color: #FFF;
   border-color: #e62321;
-  background-color: #F25F5C;
+  background-color: #f25f5c;
 }
 .smoke-base .dialog-buttons button.cancel:hover,
 .smoke-base .dialog-buttons button.cancel:active,
 .smoke-base .dialog-buttons button.cancel.active {
-  color: #FFFFFF;
+  color: #FFF;
   border-color: #be1816;
   background-color: #ee312d;
 }
@@ -255,7 +255,7 @@ a.tooltip {
 }
 .dataTables_paginate .paginate_button.current {
   font-weight: bold;
-  background: #947d7d;
+  background: #ff9ba1;
   color: #fff;
 }
 .dataTables_paginate .paginate_button.first::before,
@@ -297,6 +297,34 @@ a.tooltip {
 .dataTables_paginate .paginate_button.last::after,
 .dataTables_paginate .paginate_button.next::after {
   content: "\e0c3";
+}
+.parallax {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  height: 600px;
+}
+.parallax.take-from-widget,
+.parallax .take-from-widget {
+  position: relative;
+}
+.parallax.take-from-widget > img,
+.parallax .take-from-widget > img,
+.parallax.take-from-widget > ._lbox,
+.parallax .take-from-widget > ._lbox {
+  display: none;
+}
+.parallax.take-from-widget [data-url*="imageonly"],
+.parallax .take-from-widget [data-url*="imageonly"] {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 999;
+}
+.parallax.height-auto {
+  height: auto;
 }
 .responsive-ratio {
   position: relative;
