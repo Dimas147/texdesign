@@ -17,16 +17,26 @@
 .main_menu {
   position: relative;
   z-index: 11;
-  background: #ff2934;
+  text-align: center;
+  font-size: 0;
   color: #FFF;
 }
+.main_menu >* {
+  font-size: 1.3rem;
+  display: inline-block;
+  vertical-align: middle;
+}
 .main_menu > li {
-  float: left;
   position: relative;
+  font-weight: bold;
+}
+.main_menu > li + li {
+  margin-left: 2rem;
 }
 .main_menu > li:hover,
 .main_menu a.current {
-  background: #f5000d;
+  background: #FFF;
+  color: #222222;
 }
 .main_menu > li:hover ul {
   display: block;
@@ -38,14 +48,16 @@
   color: inherit;
 }
 .main_menu ul {
+  font-weight: normal;
   position: absolute;
+  padding: 1rem 0;
   left: 0;
   top: 100%;
   z-index: 0;
   display: none;
   width: 300px;
   background: #FFF;
-  color: #888888;
+  color: #646768;
   box-shadow: 0 3px 5px #555555;
 }
 .main_menu ul li {
@@ -54,6 +66,13 @@
 .main_menu ul li:hover,
 .main_menu ul li a.current {
   background: #eeeeee;
+}
+.index-page .main_menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5.5rem;
+  z-index: 105;
 }
 .static_menu {
   overflow: hidden;
@@ -402,6 +421,7 @@
 .mobile-menu li:hover,
 .dropdown-menu li:hover {
   background: transparent;
+  color: inherit;
 }
 .mobile-menu li:hover ul,
 .dropdown-menu li:hover ul {

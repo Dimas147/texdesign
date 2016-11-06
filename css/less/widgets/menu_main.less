@@ -1,27 +1,34 @@
 .main_menu when (@menu-main) {
-    position : relative;
-    z-index  : 11;
+    position: relative;
+    z-index: 11;
+    text-align: center;
+    .inline-block-wrap(middle; ~'>*'; 1.3rem);
+
     & when not(@nav-bg = transparent) {
-        background : @nav-bg;
+        background: @nav-bg;
     }
     & when not(@nav-color = @link-color) {
-        color : @nav-color;
+        color: @nav-color;
     }
 
     & > li {
-        float    : left;
-        position : relative;
+        position: relative;
+        font-weight: bold;
+
+        & + li{
+            margin-left: 2rem;
+        }
 
         &:hover {
             & when not(@nav-bg = @nav-bg-li-hover) {
-                background : @nav-bg-li-hover;
+                background: @nav-bg-li-hover;
             }
             & when not(@nav-color = @nav-color-li-hover) {
-                color : @nav-color-li-hover;
+                color: @nav-color-li-hover;
             }
 
             ul {
-                display : block;
+                display: block;
             }
         }
         // TODO Why we had this property for the tag 'a'?
@@ -31,11 +38,11 @@
     }
 
     a {
-        display         : block;
-        padding         : @padding-base-vertical @padding-base-horizontal;
-        text-decoration : none;
+        display: block;
+        padding: @padding-base-vertical @padding-base-horizontal;
+        text-decoration: none;
         & when not(@nav-color = @link-color) {
-            color : inherit;
+            color: inherit;
         }
 
         &.current {
@@ -44,24 +51,26 @@
             }
 
             & when not(@nav-bg-li-hover = @nav-bg-li-current) {
-                background : @nav-bg-li-current;
+                background: @nav-bg-li-current;
             }
             & when not(@nav-color-li-hover = @nav-color-li-current) {
-                color : @nav-color-li-current;
+                color: @nav-color-li-current;
             }
         }
     }
 
     ul {
-        position   : absolute;
-        left       : 0;
-        top        : 100%;
-        z-index    : 0;
-        display    : none;
-        width      : 300px;
-        background : @nav-drop-down-list-bg;
+        font-weight: normal;
+        position: absolute;
+        padding: 1rem 0;
+        left: 0;
+        top: 100%;
+        z-index: 0;
+        display: none;
+        width: 300px;
+        background: @nav-drop-down-list-bg;
         & when not(@nav-drop-down-list-color = @nav-color) {
-            color : @nav-drop-down-list-color;
+            color: @nav-drop-down-list-color;
         }
         .box-shadow(0 3px 5px @gray-dark);
 
@@ -71,16 +80,16 @@
         }
 
         li {
-            float : none;
+            float: none;
 
             &:hover {
                 & when not(@nav-drop-down-list-bg-hover = @nav-bg-li-hover)
                    and not(@nav-drop-down-list-bg-hover = @nav-drop-down-list-bg) {
-                    background : @nav-drop-down-list-bg-hover;
+                    background: @nav-drop-down-list-bg-hover;
                 }
                 & when not(@nav-drop-down-list-color-hover = @nav-drop-down-list-color)
                    and not(@nav-drop-down-list-color-hover = @nav-color-li-hover) {
-                    color : @nav-drop-down-list-color-hover;
+                    color: @nav-drop-down-list-color-hover;
                 }
             }
 
@@ -92,14 +101,21 @@
 
                     & when not(@nav-drop-down-list-bg-current = @nav-drop-down-list-bg)
                        and not(@nav-drop-down-list-bg-current = @nav-drop-down-list-bg-hover) {
-                        background : @nav-drop-down-list-bg-current;
+                        background: @nav-drop-down-list-bg-current;
                     }
                     & when not(@nav-drop-down-list-color-current = @nav-drop-down-list-color)
                        and not(@nav-drop-down-list-color-current = @nav-drop-down-list-color-hover) {
-                        color : @nav-drop-down-list-color-current;
+                        color: @nav-drop-down-list-color-current;
                     }
                 }
             }
         }
+    }
+    .index-page & {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 5.5rem;
+        z-index: 105;
     }
 }

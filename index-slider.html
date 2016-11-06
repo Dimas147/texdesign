@@ -9,7 +9,7 @@
     <h1 class="logo" itemscope itemtype="http://schema.org/Organization">
         <a href="{$website:url}" title="{$plugin:widcard:BizOrgName:notag}" itemprop="url">
             <span class="divider white">
-                <img src="{$plugin:widcard:bizLogo:url}" alt="{$page:h1}" width="75" height="85" itemprop="logo">
+                <img src="{$plugin:widcard:bizLogo:url}" alt="{$page:h1}" width="75" height="75" itemprop="logo">
             </span>
             <span itemprop="name">{$plugin:widcard:BizOrgName:notag}</span>
         </a>
@@ -19,8 +19,7 @@
         {$template:_social links}
     </ul>
 
-
-    <!--<nav id="main-menu" class="d-visible" role="navigation">{ $menu:main:_main menu}</nav>-->
+    <nav id="main-menu" class="d-visible" role="navigation">{$menu:main:_main menu}</nav>
 
     <div class="cycle-slideshow"
          data-cycle-slides=".slide"
@@ -40,7 +39,6 @@
                     <h2 class="h1 grid_12 slogan-top animated">
                         {$header:slide-text-top_key}
                     </h2>
-
                     <p class="grid_12 slogan-bottom">
                         {$header:slide-text-bottom_key}
                     </p>
@@ -49,8 +47,6 @@
             {/device}
         </div>
         {/repeat}
-        <!--<button class="action-button cycle-prev">Previous</button>-->
-        <!--<button class="action-button cycle-next">Next</button>-->
         <div class="cycle-pager"></div>
     </div>
 </header>
@@ -61,7 +57,7 @@
 
 <div class="container">
     <section class="grid_12 sp-tp sp-bm">
-        <h2 class="text-center icon-home">
+        <h2 class="text-center icon-needle">
             <span class="divider"></span>
             Latest news
         </h2>
@@ -74,7 +70,7 @@
         </p>
     </section>
     <section class="grid_12 sp-bm">
-        <h2 class="text-center icon-home">
+        <h2 class="text-center icon-needle">
             <span class="divider"></span>
             Our Gallery
         </h2>
@@ -89,15 +85,31 @@
     </section>
 </div>
 
-<div class="parallax take-from-widget dark-section">
+<div class="parallax height-auto take-from-widget dark-section">
     {$imageonly:parallax-1:1902}
     <div class="container sp-tp sp-bm">
-        <section class="grid_12">
-            <h2 class="text-center icon-home">
+        <section class="grid_10 prefix_1 suffix_1">
+            <h2 class="text-center icon-needle">
                 <span class="divider white"></span>
                 Testimonials
             </h2>
-
+            <div class="cycle-slideshow testimonial-slider"
+                 data-cycle-slides=".slide"
+                 data-cycle-fx="scrollHorz"
+                 data-cycle-speed="200"
+                 data-cycle-timeout="false"
+                 data-cycle-prev=".cycle-prev"
+                 data-cycle-next=".cycle-next"
+                 data-cycle-auto-height="calc">
+                {repeat:testimonial-slider:key:0}
+                <div class="slide text-center">
+                    <blockquote>{$content:testimonial-text_key}</blockquote>
+                    <p class="text-bold mb0px">{$header:testimonial-author_key}</p>
+                </div>
+                {/repeat}
+                <button class="action-button cycle-prev">Previous</button>
+                <button class="action-button cycle-next">Next</button>
+            </div>
             <p class="divider white top">
                 <a href="#">Learn more</a>
             </p>

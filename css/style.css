@@ -42,7 +42,7 @@ header .logo a span {
 }
 @media only screen and (min-width: 480px) {
   .index-page header .logo {
-    margin-top: -5.1rem;
+    margin-top: -5.8rem;
   }
 }
 aside .aside-box {
@@ -50,7 +50,6 @@ aside .aside-box {
 }
 footer h2 {
   margin-top: 0;
-  margin-bottom: 0;
 }
 footer .footer-columns {
   margin-top: 5rem;
@@ -80,7 +79,8 @@ footer .footer-columns {
 .dark-section a:hover {
   color: #ff2934;
 }
-.dark-section h2 {
+.dark-section h2,
+.dark-section p {
   color: #FFF;
 }
 .map {
