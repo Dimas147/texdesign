@@ -15,8 +15,11 @@
   vertical-align: top;
 }
 .main_menu {
-  position: relative;
-  z-index: 11;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+  z-index: 105;
   text-align: center;
   font-size: 0;
   color: #FFF;
@@ -68,11 +71,7 @@
   background: #eeeeee;
 }
 .index-page .main_menu {
-  position: absolute;
-  left: 0;
-  right: 0;
   bottom: 5.5rem;
-  z-index: 105;
 }
 .static_menu {
   overflow: hidden;

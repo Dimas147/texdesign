@@ -14,6 +14,14 @@ header .logo {
   margin: 0;
   text-align: center;
   line-height: 0.7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 101;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-filter: blur(0);
 }
 header .logo a {
   color: #FFF;
@@ -29,16 +37,6 @@ header .logo a span {
 }
 .index-page header {
   height: 100%;
-}
-.index-page header .logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 101;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-filter: blur(0);
 }
 @media only screen and (min-width: 480px) {
   .index-page header .logo {

@@ -303,7 +303,6 @@ a.tooltip {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow: hidden;
   height: 600px;
 }
 .parallax.take-from-widget,

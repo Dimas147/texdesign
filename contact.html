@@ -1,47 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Include head template -->
-        {$template:_head}
-    </head>
-    <body>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body>
 
-        <!-- Container -->
-        <div id="page" class="container">
+{$template:_header}
 
-            <!-- Include header template -->
-            {$template:_header}
+<div class="container">
+    <section class="grid_10 prefix_1 suffix_1 sp-tp sp-bm">
+        <h2 class="text-center icon-needle">
+            <span class="divider"></span>
+            Feedback
+        </h2>
+        {$form:contact-form:recaptcha:custom:Submit}
+    </section>
+</div>
 
-            <h1 class="grid_12" role="heading">{$page:h1}</h1>
+<div class="map">
+    {$plugin:gmaps:bizlocation:2560:600:14}
+</div>
 
-            <!-- Content box -->
-            <section class="grid_12 contact" role="main">
-                {$plugin:gmaps:bizlocation:1200:300}
-                <div class="grid_8 alpha mt30px">
-                    <h2>{$header:contact1}</h2>
-                    {$content:contact1}
-                </div>
-                <div class="grid_4 omega mt30px">
-                    <h3>{$header:contact2}</h3>
-                    <p class="fs12">
-                        <strong>Address: </strong>{$plugin:widcard:BizAddress1}  {$plugin:widcard:BizAddress2}, {$plugin:widcard:BizCity}, {$plugin:widcard:BizState} {$plugin:widcard:BizZip}<br />
-                        <strong>Phone: </strong>{$plugin:widcard:BizTelephone}<br />
-                        <strong>Email: </strong><a href="mailto:{$plugin:widcard:BizEmail:notag}">{$plugin:widcard:BizEmail}</a>
-                    </p>
-                    <h3>{$header:contact3}</h3>
-                    {$content:contact2}
-                </div>
-            </section>
-
-            <!-- Footer -->
-            <!-- Include Footer template -->
-            {$template:_footer}
-        </div>
-
-        <!-- Include mobile elements template -->
-        {$template:_mobile elements}
-
-        <!-- Include scripts template -->
-        {$template:_scripts}
-    </body>
+{$template:_footer}
+{$template:_mobile elements}
+{$template:_scripts}
+</body>
 </html>

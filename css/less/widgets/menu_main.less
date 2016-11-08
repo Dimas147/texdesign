@@ -1,7 +1,11 @@
 .main_menu when (@menu-main) {
-    position: relative;
-    z-index: 11;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2rem;
+    z-index: 105;
     text-align: center;
+
     .inline-block-wrap(middle; ~'>*'; 1.3rem);
 
     & when not(@nav-bg = transparent) {
@@ -112,10 +116,6 @@
         }
     }
     .index-page & {
-        position: absolute;
-        left: 0;
-        right: 0;
         bottom: 5.5rem;
-        z-index: 105;
     }
 }
