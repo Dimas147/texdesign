@@ -55,9 +55,9 @@
   font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFF;
-  border-color: #ff070b;
-  background-color: #ff2934;
+  color: #ff2934;
+  border-color: #ff2934;
+  background-color: transparent;
   border: none;
   transition: background 0.3s;
   -webkit-user-select: none;
@@ -70,9 +70,9 @@
 .product .tcart-add:hover,
 .product .tcart-add:active,
 .product .tcart-add.active {
-  color: #FFF;
-  border-color: #d30003;
-  background-color: #f5000d;
+  color: #000;
+  border-color: #f5000d;
+  background-color: rgba(0, 0, 0, 0);
 }
 .product .tcart-add:active,
 .product .tcart-add.active {
@@ -118,9 +118,9 @@
   font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFF;
-  border-color: #ff070b;
-  background-color: #ff2934;
+  color: #ff2934;
+  border-color: #ff2934;
+  background-color: transparent;
   border: none;
   transition: background 0.3s;
   -webkit-user-select: none;
@@ -132,9 +132,9 @@
 .product-item .tcart-add:hover,
 .product-item .tcart-add:active,
 .product-item .tcart-add.active {
-  color: #FFF;
-  border-color: #d30003;
-  background-color: #f5000d;
+  color: #000;
+  border-color: #f5000d;
+  background-color: rgba(0, 0, 0, 0);
 }
 .product-item .tcart-add:active,
 .product-item .tcart-add.active {
@@ -1015,9 +1015,9 @@
   font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFF;
-  border-color: #ff070b;
-  background-color: #ff2934;
+  color: #ff2934;
+  border-color: #ff2934;
+  background-color: transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1030,9 +1030,9 @@
 #user-grid-part ul.user-stats li:hover,
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {
-  color: #FFF;
-  border-color: #d30003;
-  background-color: #f5000d;
+  color: #000;
+  border-color: #f5000d;
+  background-color: rgba(0, 0, 0, 0);
 }
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {

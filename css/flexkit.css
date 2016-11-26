@@ -147,7 +147,7 @@
 .smoke-base .dialog-buttons button:hover,
 .smoke-base .dialog-buttons button:active,
 .smoke-base .dialog-buttons button.active {
-  color: #FFF;
+  color: #000;
   border-color: #126f13;
   background-color: #37ac3a;
 }
@@ -160,7 +160,7 @@
 .smoke-base .dialog-buttons button.cancel:hover,
 .smoke-base .dialog-buttons button.cancel:active,
 .smoke-base .dialog-buttons button.cancel.active {
-  color: #FFF;
+  color: #000;
   border-color: #be1816;
   background-color: #ee312d;
 }

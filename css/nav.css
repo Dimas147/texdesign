@@ -60,7 +60,7 @@
   display: none;
   width: 300px;
   background: #FFF;
-  color: #646768;
+  color: #000000;
   box-shadow: 0 3px 5px #555555;
 }
 .main_menu ul li {
@@ -68,7 +68,8 @@
 }
 .main_menu ul li:hover,
 .main_menu ul li a.current {
-  background: #eeeeee;
+  background: #ff2934;
+  color: #FFF;
 }
 .index-page .main_menu {
   bottom: 5.5rem;

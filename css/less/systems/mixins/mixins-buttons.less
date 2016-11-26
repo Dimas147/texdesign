@@ -1,9 +1,9 @@
 .button(
     @color        : @button-primary-color;
     @background   : @button-primary-bg;
-    @border       : softlight(@background, #000);
+    @border       : @brand-primary;
     @border-width : @button-border-width;
-    @radius       : @button-border-radius
+    @radius       : @button-border-radius;
 ) {
     text-align      : center;
     cursor          : pointer;
@@ -52,7 +52,7 @@
     @color;
     @background;
     @border      : softlight(extract(@background, 1), #000);
-    @color2      : extract(@color, 1);
+    @color2      : #000;
     @background2 : darken(extract(@background, 1), 10%);
     @border2     : darken(extract(@border, 1), 10%)
 ) {

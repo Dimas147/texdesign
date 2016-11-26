@@ -30,7 +30,10 @@
     }
 
     & > .tpopup {
-        position: relative;
+        position: absolute;
+        left: 0;
+        top: -0.25rem;
+        z-index: 101;
     }
 
     .slide {
@@ -115,11 +118,7 @@
         .box-sizing(content-box);
         .icon-size(@slider-button-size; true);
         .transition();
-
-        &:hover {
-            background: darken(@primary-bg, 10%);
-            color: @primary-color;
-        }
+        .button-color(@primary-color; transparent; @primary-color; @brand-primary; transparent; @brand-primary);
 
         &::before {
             font-family: @font-family-icons;
@@ -143,6 +142,9 @@
     }
 
     &:hover .action-button {
+        &:before{
+            font-size:1.25rem;
+        }
         &.cycle-prev {
             left: 10px;
         }
@@ -150,7 +152,21 @@
         &.cycle-next {
             right: 10px;
         }
+    }
+    &.testimonial-slider {
+        blockquote {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        &:hover .action-button {
+            &.cycle-prev {
+                left: 0;
+            }
 
+            &.cycle-next {
+                right: 0;
+            }
+        }
     }
 }
 

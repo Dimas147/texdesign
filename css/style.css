@@ -114,9 +114,9 @@ form .captcha .captcha_image a {
   font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFF;
-  border-color: #ff070b;
-  background-color: #ff2934;
+  color: #ff2934;
+  border-color: #ff2934;
+  background-color: transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -129,6 +129,7 @@ form .captcha .captcha_image a {
   padding: 0;
   white-space: nowrap;
   width: 2.3em;
+  font-weight: 700;
   margin-right: 0.25em;
 }
 form .captcha .recaptcha_links a:hover,
@@ -137,9 +138,9 @@ form .captcha .recaptcha_links a:active,
 form .captcha .captcha_image a:active,
 form .captcha .recaptcha_links a.active,
 form .captcha .captcha_image a.active {
-  color: #FFF;
-  border-color: #d30003;
-  background-color: #f5000d;
+  color: #000;
+  border-color: #f5000d;
+  background-color: rgba(0, 0, 0, 0);
 }
 form .captcha .recaptcha_links a:active,
 form .captcha .captcha_image a:active,
@@ -154,6 +155,12 @@ form .captcha .captcha_image a::before {
   float: left;
   margin: 0;
   line-height: inherit !important;
+}
+form .captcha .recaptcha_links a:focus,
+form .captcha .captcha_image a:focus,
+form .captcha .recaptcha_links a:active,
+form .captcha .captcha_image a:active {
+  box-shadow: none !important;
 }
 form .captcha .captcha_image {
   width: 100% !important;
@@ -637,7 +644,10 @@ textarea.resize {
   height: 100%;
 }
 .cycle-slideshow > .tpopup {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: -0.25rem;
+  z-index: 101;
 }
 .cycle-slideshow .slide {
   width: 100%;
@@ -720,7 +730,6 @@ textarea.resize {
 }
 .cycle-slideshow [class*="cycle-"].action-button {
   background: #ff2934;
-  color: #FFF;
   position: absolute;
   top: 50%;
   z-index: 101;
@@ -733,13 +742,19 @@ textarea.resize {
   line-height: 18px;
   font-size: 0;
   transition: all 0.3s;
+  color: #FFF;
+  border-color: #FFF;
+  background-color: transparent;
 }
 .cycle-slideshow [class*="cycle-"].action-button::before {
   font-size: 18px;
 }
-.cycle-slideshow [class*="cycle-"].action-button:hover {
-  background: #f5000d;
-  color: #FFF;
+.cycle-slideshow [class*="cycle-"].action-button:hover,
+.cycle-slideshow [class*="cycle-"].action-button:active,
+.cycle-slideshow [class*="cycle-"].action-button.active {
+  color: #ff2934;
+  border-color: #ff2934;
+  background-color: transparent;
 }
 .cycle-slideshow [class*="cycle-"].action-button::before {
   font-family: flexkit-icons;
@@ -756,11 +771,24 @@ textarea.resize {
 .cycle-slideshow [class*="cycle-"].action-button.cycle-next::before {
   content: "\e0c6";
 }
+.cycle-slideshow:hover .action-button:before {
+  font-size: 1.25rem;
+}
 .cycle-slideshow:hover .action-button.cycle-prev {
   left: 10px;
 }
 .cycle-slideshow:hover .action-button.cycle-next {
   right: 10px;
+}
+.cycle-slideshow.testimonial-slider blockquote {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.cycle-slideshow.testimonial-slider:hover .action-button.cycle-prev {
+  left: 0;
+}
+.cycle-slideshow.testimonial-slider:hover .action-button.cycle-next {
+  right: 0;
 }
 .slide-text {
   margin-top: 50vh;

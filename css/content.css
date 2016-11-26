@@ -2660,7 +2660,7 @@ a.inherit-color:hover {
 .gl-change .generator-links:hover,
 .gl-change .generator-links:active,
 .gl-change .generator-links.active {
-  color: #FFF;
+  color: #000;
   border-color: #055eab;
   background-color: #1195d1;
 }
@@ -2770,7 +2770,7 @@ a:hover.facebook {
 .btn.gplus:hover,
 .btn.gplus:active,
 .btn.gplus.active {
-  color: #FFFFFF;
+  color: #000;
   border-color: #c23321;
   background-color: #c23321;
 }
@@ -2782,7 +2782,7 @@ a:hover.facebook {
 .btn.twitter:hover,
 .btn.twitter:active,
 .btn.twitter.active {
-  color: #FFFFFF;
+  color: #000;
   border-color: #2795e9;
   background-color: #2795e9;
 }
@@ -2794,7 +2794,7 @@ a:hover.facebook {
 .btn.youtube:hover,
 .btn.youtube:active,
 .btn.youtube.active {
-  color: #FFFFFF;
+  color: #000;
   border-color: #c21d17;
   background-color: #c21d17;
 }
@@ -2806,7 +2806,7 @@ a:hover.facebook {
 .btn.linkedin:hover,
 .btn.linkedin:active,
 .btn.linkedin.active {
-  color: #FFFFFF;
+  color: #000;
   border-color: #075683;
   background-color: #075683;
 }
@@ -2818,7 +2818,7 @@ a:hover.facebook {
 .btn.facebook:hover,
 .btn.facebook:active,
 .btn.facebook.active {
-  color: #FFFFFF;
+  color: #000;
   border-color: #2d4373;
   background-color: #2d4373;
 }
@@ -3507,9 +3507,9 @@ button,
   font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFF;
-  border-color: #ff070b;
-  background-color: #ff2934;
+  color: #ff2934;
+  border-color: #ff2934;
+  background-color: transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3517,6 +3517,8 @@ button,
   box-shadow: none;
   border: none;
   transition: background 0.3s;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .btn:hover,
 button:hover,
@@ -3533,9 +3535,9 @@ button.active,
 [type="submit"].active,
 [type="button"].active,
 [type="reset"].active {
-  color: #FFF;
-  border-color: #d30003;
-  background-color: #f5000d;
+  color: #000;
+  border-color: #f5000d;
+  background-color: rgba(0, 0, 0, 0);
 }
 .btn:active,
 button:active,
@@ -3565,6 +3567,18 @@ button.disabled,
   cursor: not-allowed !important;
   box-shadow: none !important;
 }
+.btn:focus,
+button:focus,
+[type="submit"]:focus,
+[type="button"]:focus,
+[type="reset"]:focus,
+.btn:active,
+button:active,
+[type="submit"]:active,
+[type="button"]:active,
+[type="reset"]:active {
+  box-shadow: none !important;
+}
 .btn[class*="grid_"],
 [class*="column_"] > .btn {
   padding-left: 0 !important;
@@ -3581,8 +3595,8 @@ button.disabled,
 }
 .btn.inverse:hover,
 .btn.inverse:active {
-  color: #FFF;
-  background-color: #f5000d;
+  color: #ff2934;
+  background-color: rgba(0, 0, 0, 0);
 }
 .btn.warning {
   color: #FFF;
@@ -3592,7 +3606,7 @@ button.disabled,
 .btn.warning:hover,
 .btn.warning:active,
 .btn.warning.active {
-  color: #FFF;
+  color: #000;
   border-color: #eb7900;
   background-color: #ffae26;
 }
@@ -3604,7 +3618,7 @@ button.disabled,
 .btn.error:hover,
 .btn.error:active,
 .btn.error.active {
-  color: #FFF;
+  color: #000;
   border-color: #be1816;
   background-color: #ee312d;
 }
@@ -3616,7 +3630,7 @@ button.disabled,
 .btn.success:hover,
 .btn.success:active,
 .btn.success.active {
-  color: #FFF;
+  color: #000;
   border-color: #126f13;
   background-color: #37ac3a;
 }
@@ -3628,7 +3642,7 @@ button.disabled,
 .btn.info:hover,
 .btn.info:active,
 .btn.info.active {
-  color: #FFF;
+  color: #000;
   border-color: #055eab;
   background-color: #1195d1;
 }

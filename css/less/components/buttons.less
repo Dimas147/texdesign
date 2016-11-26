@@ -2,6 +2,8 @@
 // --------------------------------------------------
 .btn, button, [type="submit"], [type="button"], [type="reset"] {
     .button();
+    text-transform: uppercase;
+    font-weight: 700;
 
     &[disabled], &.disabled {
         border-color     : @gray-light !important;
@@ -11,6 +13,9 @@
             cursor : default !important;
         }
         cursor           : not-allowed !important;
+        .box-shadow(~'none !important', @button-box-shadow);
+    }
+    &:focus, &:active{
         .box-shadow(~'none !important', @button-box-shadow);
     }
 }
