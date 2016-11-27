@@ -1,10 +1,8 @@
 .news-item when (@widget-news-list) {
-    & > * {
-        display: block;
-    }
 
     .news-item-image {
         position: relative;
+        display: block;
         img {
             width: 100%;
         }
@@ -25,24 +23,26 @@
     }
 
     .news-item-title {
+        display: block;
     }
 
     .newslog-admin-actions {
+        display: block;
         a {
         }
     }
 
     .news-item-date {
-
+        display: block;
     }
 
     .news-item-description {
+        display: block;
     }
 
     .news-item-tags {
-
+        display: block;
         a {
-
         }
     }
 
@@ -86,6 +86,15 @@
             padding-right: 0.5em;
             margin-top: -0.25em;
 
+        }
+    }
+}
+
+.news-room{
+    margin-top: 2.7rem;
+    .news-item{
+        & + .news-item{
+            margin-top: 2.5em;
         }
     }
 }

@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Include head template -->
-        {$template:_head}
-    </head>
-    <body>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body>
 
-        <!-- Container -->
-        <div id="page" class="container">
+{$template:_header}
 
-            <!-- Include header template -->
-            {$template:_header}
+<div class="container">
+    <section class="grid_10 prefix_1 suffix_1 sp-tp sp-bm">
+        <h2 class="text-center icon-needle">
+            <span class="divider"></span>
+            {$page:h1}
+        </h2>
+        {repeat:Section box:key:1}
+        <article>
+            <h3>{$header:content_key}</h3>
+            {$content:content_key1}
+        </article>
+        {/repeat}
+    </section>
+</div>
 
-            <h1 class="grid_12" role="heading">{$page:h1}</h1>
-
-            <!-- Content box -->
-            <section class="grid_6 push_3" role="main">
-                {repeat:Section box:key:1}
-                <article>
-                    <h2>{$header:content_key}</h2>
-                    {$content:content_key1}
-                    {$content:content_key2}
-                </article>
+<div class="parallax height-auto take-from-widget dark-section">
+    {$imageonly:parallax-1:1902}
+    <div class="container sp-tp sp-bm">
+        <section class="grid_10 prefix_1 suffix_1">
+            <h2 class="text-center icon-needle">
+                <span class="divider white"></span>
+                Testimonials
+            </h2>
+            <div class="cycle-slideshow testimonial-slider"
+                 data-cycle-slides=".slide"
+                 data-cycle-fx="scrollHorz"
+                 data-cycle-speed="200"
+                 data-cycle-timeout="false"
+                 data-cycle-prev=".cycle-prev"
+                 data-cycle-next=".cycle-next"
+                 data-cycle-auto-height="calc">
+                {repeat:testimonial-slider:key:0}
+                <div class="slide text-center">
+                    <blockquote>{$content:testimonial-text_key}</blockquote>
+                    <p class="text-bold mb0px">{$header:testimonial-author_key}</p>
+                </div>
                 {/repeat}
-            </section>
+                <button class="action-button cycle-prev">Previous</button>
+                <button class="action-button cycle-next">Next</button>
+            </div>
+            <p class="divider white top">
+                <a href="#">Learn more</a>
+            </p>
+        </section>
+    </div>
+</div>
 
-            <!-- Left box -->
-            <aside class="grid_3 pull_6" role="complementary">
-                {repeat:Aside left box:key:1}
-                <section class="aside-box">
-                    <h3>{$header:left_key}</h3>
-                    {$content:left_key}
-                </section>
-                {/repeat}
-            </aside>
-
-            <!-- Right box -->
-            <aside class="grid_3" role="complementary">
-                {repeat:Aside right box:key:1}
-                <section class="aside-box">
-                    <h3>{$header:right_key}</h3>
-                    {$content:right_key}
-                </section>
-                {/repeat}
-            </aside>
-
-            <!-- Footer -->
-            <!-- Include Footer template -->
-            {$template:_footer}
-        </div>
-
-        <!-- Include mobile elements template -->
-        {$template:_mobile elements}
-
-        <!-- Include scripts template -->
-        {$template:_scripts}
-    </body>
+{$template:_footer}
+{$template:_mobile elements}
+{$template:_scripts}
+</body>
 </html>

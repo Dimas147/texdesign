@@ -2,29 +2,37 @@
     <section class="grid_12 sp-tp sp-bm">
         <h2 class="icon-needle">
             <span class="divider"></span>
-            Contacts
+            {$header:footer-name:static}
         </h2>
         <div class="column_3 footer-columns">
             <div>
-                Lorem ipsum<br />
-                Dolor sit amet<br />
-                Lorem ipsum<br />
+                <div class="icon-location text-left">
+                    {$plugin:widcard:BizAddress1:notag}, {$header:BizAddress2:static}, {$plugin:widcard:BizCity:notag}, {$header:BizState:static}
+                </div>
             </div>
             <div>
-                Lorem ipsum<br />
-                Dolor sit amet<br />
-                Lorem ipsum<br />
+                <div class="icon-phone text-left">
+                    <a href="tel:{$plugin:widcard:BizTelephone:notag}">{$plugin:widcard:BizTelephone:notag}</a> <br />
+                    <a href="tel:{$prepop:tel-1:text:static:readonly}">{$prepop:tel-1:text:static:readonly}</a>
+                    {adminonly}
+                    <p class="mt15px">{$prepop:tel-1:text:static}</p>
+                    {/adminonly}
+                </div>
             </div>
             <div>
-                Lorem ipsum<br />
-                Dolor sit amet<br />
-                Lorem ipsum<br />
+                <div class="icon-mail text-left">
+                    <a href="mailto:{$plugin:widcard:BizEmail:notag}">{$plugin:widcard:BizEmail:notag}</a> <br />
+                    <a href="mailto:{$prepop:email-1:text:static:readonly}">{$prepop:email-1:text:static:readonly}</a>
+                    {adminonly}
+                    <p class="mt15px">{$prepop:email-1:text:static}</p>
+                    {/adminonly}
+                </div>
             </div>
         </div>
         <h2 class="text-center icon-needle">
             <span class="divider inverse"></span>
             {$plugin:widcard:BizOrgName:notag}
         </h2>
-        <p class="copyright">Textile Design 2016</p>
+        <p class="copyright">{$header:copyright:static}</p>
     </section>
 </footer>

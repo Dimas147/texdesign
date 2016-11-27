@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Include head template -->
-        {$template:_head}
-    </head>
-    <body>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body>
 
-        <!-- Container -->
-        <div id="page" class="container">
+{$template:_header}
 
-            <!-- Include header template -->
-            {$template:_header}
-
-            <h1 class="grid_12" role="heading">{$page:h1}</h1>
-
-            <!-- Content box -->
-            <section class="grid_9" role="main">
-                <!-- news list -->
-            {newslist:NEWS-LIST_NAME}
-                <article class="news-item">
-                    {$news:actions}
-                    <time class="news-item-date small block mb10px" datetime="{$news:date:Y-m-d}">
-                        <i class="icon-calendar2 icon16"></i>
-                        {$news:date: M d, Y}
-                    </time>
-                    <a class="news-item-image text-center grid_3 alpha" href="{$news:url}">
-                        <img src="{$news:preview}" alt="{$news:title:inline}"/>
-                    </a>
-                    <a class="news-item-title large grid_9 omega mb10px" href="{$news:url}">{$news:title}</a>
-                    <p class="news-item-description grid_9 omega mb10px">{$news:teaser}</p>
-                    <p class="news-item-tags small cl-both text-right">{$news:tags}</p>
-                </article>
-            {/newslist}
-            </section>
-
-            <!-- Right box -->
-            <aside class="grid_3" role="complementary">
-                {repeat:Aside right box:key:1}
-                <section class="aside-box">
-                    <h3>{$header:right_key}</h3>
-                    {$content:right_key}
-                </section>
-                {/repeat}
-            </aside>
-
-            <!-- Footer -->
-            <!-- Include Footer template -->
-            {$template:_footer}
+<div class="container">
+    <section class="grid_12 sp-tp sp-bm">
+        <h2 class="text-center icon-needle">
+            <span class="divider"></span>
+            {$page:h1}
+        </h2>
+        <div class="news-room">
+            {$newslist:_news list:desc:10:pgr}
         </div>
+    </section>
+</div>
 
-        <!-- Include mobile elements template -->
-        {$template:_mobile elements}
+<div class="parallax height-auto take-from-widget dark-section">
+    {$imageonly:parallax-1:1902}
+    <div class="container sp-tp sp-bm">
+        <section class="grid_10 prefix_1 suffix_1">
+            <h2 class="text-center icon-needle">
+                <span class="divider white"></span>
+                Testimonials
+            </h2>
+            <div class="cycle-slideshow testimonial-slider"
+                 data-cycle-slides=".slide"
+                 data-cycle-fx="scrollHorz"
+                 data-cycle-speed="200"
+                 data-cycle-timeout="false"
+                 data-cycle-prev=".cycle-prev"
+                 data-cycle-next=".cycle-next"
+                 data-cycle-auto-height="calc">
+                {repeat:testimonial-slider:key:0}
+                <div class="slide text-center">
+                    <blockquote>{$content:testimonial-text_key}</blockquote>
+                    <p class="text-bold mb0px">{$header:testimonial-author_key}</p>
+                </div>
+                {/repeat}
+                <button class="action-button cycle-prev">Previous</button>
+                <button class="action-button cycle-next">Next</button>
+            </div>
+            <p class="divider white top">
+                <a href="#">Learn more</a>
+            </p>
+        </section>
+    </div>
+</div>
 
-        <!-- Include scripts template -->
-        {$template:_scripts}
-    </body>
+{$template:_footer}
+{$template:_mobile elements}
+{$template:_scripts}
+</body>
 </html>
