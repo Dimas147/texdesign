@@ -2711,6 +2711,9 @@ a.inherit-color:hover {
 .absolute {
   position: absolute;
 }
+.mt {
+  margin-top: 2.7rem;
+}
 .rss {
   color: #f26522;
 }
@@ -2861,6 +2864,7 @@ a:hover.facebook {
     font-size: 0.7em;
     font-weight: 700;
     text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
     color: #FFF;
     border-color: transparent;
     background-color: transparent;
@@ -2975,7 +2979,6 @@ code {
 a {
   color: #ff2934;
   text-decoration: none;
-  transition: all 0.3s;
 }
 a:hover {
   color: #000000;
@@ -3054,6 +3057,14 @@ h2,
   line-height: 1;
   text-transform: uppercase;
   font-weight: 600;
+}
+h2.icon-needle,
+.h2.icon-needle {
+  margin-bottom: 2.7rem;
+}
+.parallax h2.icon-needle,
+.parallax .h2.icon-needle {
+  margin-bottom: 0.5em;
 }
 h3,
 .h3 {

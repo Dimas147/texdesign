@@ -21,33 +21,25 @@
 </div>
 
 <div class="parallax height-auto take-from-widget dark-section">
-    {$imageonly:parallax-1:1902}
+    {$imageonly:other-news:1902:static}
     <div class="container sp-tp sp-bm">
-        <section class="grid_10 prefix_1 suffix_1">
+        <section class="grid_12">
             <h2 class="text-center icon-needle">
                 <span class="divider white"></span>
-                Testimonials
+                {$header:other-news:static}
             </h2>
-            <div class="cycle-slideshow testimonial-slider"
+            <div class="cycle-slideshow news-slider"
                  data-cycle-slides=".slide"
                  data-cycle-fx="scrollHorz"
                  data-cycle-speed="200"
-                 data-cycle-timeout="false"
+                 data-cycle-timeout="20000"
                  data-cycle-prev=".cycle-prev"
                  data-cycle-next=".cycle-next"
                  data-cycle-auto-height="calc">
-                {repeat:testimonial-slider:key:0}
-                <div class="slide text-center">
-                    <blockquote>{$content:testimonial-text_key}</blockquote>
-                    <p class="text-bold mb0px">{$header:testimonial-author_key}</p>
-                </div>
-                {/repeat}
-                <button class="action-button cycle-prev">Previous</button>
-                <button class="action-button cycle-next">Next</button>
+                {$newslist:_news in slider:2:desc}
+                <button class="action-button cycle-prev hide">Previous</button>
+                <button class="action-button cycle-next hide">Next</button>
             </div>
-            <p class="divider white top">
-                <a href="#">Learn more</a>
-            </p>
         </section>
     </div>
 </div>
@@ -55,5 +47,6 @@
 {$template:_footer}
 {$template:_mobile elements}
 {$template:_scripts}
+<script src="js/plugin/jquery.cycle2.min.js"></script>
 </body>
 </html>

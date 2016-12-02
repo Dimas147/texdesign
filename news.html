@@ -1,52 +1,69 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Include head template -->
-        {$template:_head}
-    </head>
-    <body>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body>
 
-        <!-- Container -->
-        <div id="page" class="container">
+{$template:_header}
 
-            <!-- Include header template -->
-            {$template:_header}
-
-            <h1 class="grid_12" role="heading">{$page:h1}</h1>
-
-            <!-- Content box -->
-            <section class="grid_9" role="main">
-                <!-- news content -->
+<div class="container">
+    <section class="grid_12 sp-tp sp-bm">
+        <h2 class="text-center icon-needle">
+            <span class="divider"></span>
+            {$page:h1}
+        </h2>
+        <div class="news-item mt clearfix">
+            {$news:actions}
+            <div class="grid_4 alpha">
+                <a class="news-item-image" href="{$news:url}">
+                    <img src="{$news:preview}" alt="{$news:title:inline}"/>
+                </a>
+                <time class="news-item-date fs14" datetime="{$news:date:Y-m-d}">{$news:date: M d, Y}</time>
+            </div>
+            <div class="grid_8 omega">
                 {newscontent}
-                {repeat:Article blocks:key}
+                {repeat:Article blocks:key:1}
                 <article>
-                    <h2>{$header:content_key}</h2>
-                    {$content:content_key1}
-                    {$content:content_key2}
+                    <h3 class="text-uppercase">{$header:content_key}</h3>
+                    {$content:content_key}
                 </article>
                 {/repeat}
                 {/newscontent}
-            </section>
-
-            <!-- Right box -->
-            <aside class="grid_3" role="complementary">
-                {repeat:Aside right box:key:1}
-                <section class="aside-box">
-                    <h3>{$header:right_key}</h3>
-                    {$content:right_key}
-                </section>
-                {/repeat}
-            </aside>
-
-            <!-- Footer -->
-            <!-- Include Footer template -->
-            {$template:_footer}
+                <p class="news-item-tags">{$news:tags}</p>
+            </div>
         </div>
+    </section>
+</div>
 
-        <!-- Include mobile elements template -->
-        {$template:_mobile elements}
+<div class="parallax height-auto take-from-widget dark-section">
+    {$imageonly:other-news:1902:static}
+    <div class="container sp-tp sp-bm">
+        <section class="grid_12">
+            <h2 class="text-center icon-needle">
+                <span class="divider white"></span>
+                {$header:other-news:static}
+            </h2>
+            <div class="cycle-slideshow news-slider"
+                 data-cycle-slides=".slide"
+                 data-cycle-fx="scrollHorz"
+                 data-cycle-speed="200"
+                 data-cycle-timeout="20000"
+                 data-cycle-prev=".cycle-prev"
+                 data-cycle-next=".cycle-next"
+                 data-cycle-auto-height="calc">
+                {$newslist:_news in slider:2:desc}
+                <button class="action-button cycle-prev hide">Previous</button>
+                <button class="action-button cycle-next hide">Next</button>
+            </div>
+        </section>
+    </div>
+</div>
 
-        <!-- Include scripts template -->
-        {$template:_scripts}
-    </body>
+{$template:_footer}
+{$template:_mobile elements}
+{$template:_scripts}
+<script src="js/plugin/jquery.cycle2.min.js"></script>
+</body>
 </html>

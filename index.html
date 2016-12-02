@@ -59,7 +59,7 @@
     <section class="grid_12 sp-tp sp-bm">
         <h2 class="text-center icon-needle">
             <span class="divider"></span>
-            Latest news
+            {$header:news}
         </h2>
 
         <div class="news-container">
@@ -72,7 +72,7 @@
     <section class="grid_12 sp-bm">
         <h2 class="text-center icon-needle">
             <span class="divider"></span>
-            Our Gallery
+            {$header:gallery}
         </h2>
 
         <div class="gallery-container">
@@ -85,12 +85,12 @@
 </div>
 
 <div class="parallax height-auto take-from-widget dark-section">
-    {$imageonly:parallax-1:1902}
+    {$imageonly:testimonials-parallax:original:static}
     <div class="container sp-tp sp-bm">
         <section class="grid_10 prefix_1 suffix_1">
             <h2 class="text-center icon-needle">
                 <span class="divider white"></span>
-                Testimonials
+                {$header:testimonials}
             </h2>
             <div class="cycle-slideshow testimonial-slider"
                  data-cycle-slides=".slide"
@@ -111,6 +111,7 @@
             </div>
             <p class="divider white top">
                 <a href="#">Learn more</a>
+
             </p>
         </section>
     </div>

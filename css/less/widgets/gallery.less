@@ -8,11 +8,12 @@
     }
 
     a {
+        display: block;
         position: relative;
         img {
             width: 100%;
         }
-        &::before{
+        &::before {
             content: '';
             position: absolute;
             top: 0;
@@ -21,8 +22,8 @@
             left: 0;
             .transition();
         }
-        &:hover{
-            &::before{
+        &:hover {
+            &::before {
                 .rgba(#000000; 30%);
             }
         }
@@ -41,7 +42,7 @@
         font-size: 1.2em;
         .text-overflow();
         .transition();
-        @media only screen and (min-width : @responsive-size-tablet) {
+        @media only screen and (min-width: @responsive-size-tablet) {
             margin-right: 25%;
         }
     }

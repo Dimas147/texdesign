@@ -2,6 +2,7 @@ html {
   height: 100%;
 }
 body {
+  background-image: url("http://www.texdesign.pchelka.kh.ua/media/bg/original/bg_3.jpg");
   height: 100%;
 }
 header {
@@ -22,6 +23,7 @@ header .logo {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -webkit-filter: blur(0);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 header .logo a {
   color: #FFF;
@@ -604,6 +606,7 @@ textarea.resize {
   }
 }
 .img_gallery a {
+  display: block;
   position: relative;
 }
 .img_gallery a img {
@@ -797,20 +800,20 @@ textarea.resize {
   font-size: 1.25rem;
 }
 .cycle-slideshow:hover .action-button.cycle-prev {
-  left: 10px;
+  left: 0;
 }
 .cycle-slideshow:hover .action-button.cycle-next {
-  right: 10px;
+  right: 0;
 }
 .cycle-slideshow.testimonial-slider blockquote {
   padding-left: 3rem;
   padding-right: 3rem;
 }
-.cycle-slideshow.testimonial-slider:hover .action-button.cycle-prev {
-  left: 0;
+.cycle-slideshow.news-slider {
+  margin-top: 1.7em;
 }
-.cycle-slideshow.testimonial-slider:hover .action-button.cycle-next {
-  right: 0;
+.cycle-slideshow.news-slider .divider {
+  margin-top: 2em;
 }
 .slide-text {
   margin-top: 50vh;
@@ -820,6 +823,7 @@ textarea.resize {
   text-transform: uppercase;
   margin-bottom: 0;
   color: inherit;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 .slide-text .slogan-top + .slogan-bottom {
   margin-top: 0.5em;
@@ -830,6 +834,7 @@ textarea.resize {
 }
 .slide-text .slogan-bottom {
   margin-bottom: 0;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 @media only screen and (min-width: 801px) {
   .d-hide,
