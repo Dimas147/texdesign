@@ -2603,7 +2603,8 @@ a.inherit-color:hover {
   background-color: #eeeeee;
 }
 .white-bg {
-  background: #fff;
+  background: #FFF;
+  padding: 1em;
 }
 .gray-darker {
   color: #222222;

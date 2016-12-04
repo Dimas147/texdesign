@@ -4,27 +4,36 @@
 
     li {
         .grid-elements(2; @grid-margin-width; true; 1; 1);
+        background: @primary-color;
+        padding: 1em;
         margin-bottom: 1.5rem;
     }
 
     a {
         display: block;
         position: relative;
+        overflow: hidden;
         img {
             width: 100%;
+            .scale(1.01);
+            .transition(all ease 0.5s);
         }
-        &::before {
+        &::after {
             content: '';
             position: absolute;
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
+            .rgba(#000000; 30%);
             .transition();
         }
         &:hover {
-            &::before {
-                .rgba(#000000; 30%);
+            &::after {
+                .rgba(#000000; 0%);
+            }
+            img {
+                .scale(1.1);
             }
         }
     }

@@ -108,6 +108,9 @@ footer .footer-columns a:hover {
 .map {
   pointer-events: none;
 }
+.copyright {
+  margin-bottom: 0;
+}
 form::after {
   content: "";
   display: table;
@@ -271,6 +274,9 @@ form .captcha #recaptcha_audio_download::before {
 }
 form [type="submit"] {
   float: right;
+}
+form#plugin-quote-quoteform {
+  margin-bottom: 0;
 }
 fieldset legend {
   font-size: 1.25em;
@@ -584,6 +590,8 @@ textarea.resize {
   margin-left: 2%;
   margin-right: 0;
   width: 49%;
+  background: #FFF;
+  padding: 1em;
   margin-bottom: 1.5rem;
 }
 .img_gallery li:nth-of-type(2n + 1) {
@@ -608,21 +616,32 @@ textarea.resize {
 .img_gallery a {
   display: block;
   position: relative;
+  overflow: hidden;
 }
 .img_gallery a img {
   width: 100%;
+  -webkit-transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  transform: scale(1.01, 1.01);
+  transition: all ease 0.5s;
 }
-.img_gallery a::before {
+.img_gallery a::after {
   content: '';
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  background: rgba(0, 0, 0, 0.3);
   transition: all 0.3s;
 }
-.img_gallery a:hover::before {
-  background: rgba(0, 0, 0, 0.3);
+.img_gallery a:hover::after {
+  background: rgba(0, 0, 0, 0);
+}
+.img_gallery a:hover img {
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
 }
 .img_gallery .image_caption {
   margin-bottom: 0;

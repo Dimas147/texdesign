@@ -1,64 +1,96 @@
 .carousel when (@componentsJS-carousel) {
-    position  : relative;
-    max-width : 100%;
+    position: relative;
+    max-width: 100%;
     .user-select();
 
     .carousel-clip {
-        overflow : hidden;
-        height   : 100%;
+        overflow: hidden;
+        height: 100%;
     }
 
     .carousel-wrap {
         .inline-block-wrap(top; ~'.carousel-item');
-        min-width : 100%;
+        min-width: 100%;
     }
 
     &:hover {
         .carousel-btn {
-            display : block;
+            display: block;
         }
     }
 
     .carousel-btn {
-        .rgba(#fff; 75%);
-        position  : absolute;
-        top       : 0;
-        bottom    : 0;
-        z-index   : 15;
-        margin    : auto;
-        width     : 3em;
-        display   : none;
-        font-size : @font-size-base;
+        .rgba(#FFFFFF; 75%);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 15;
+        margin: auto;
+        width: 3em;
+        display: none;
+        font-size: @font-size-base;
 
         &::before {
-            font-family : @font-family-icons;
-            font-size   : 3em;
-            line-height : 1;
-            height      : 1em;
-            position    : absolute;
-            left        : 0;
-            top         : 0;
-            bottom      : 0;
-            margin      : auto;
+            font-family: @font-family-icons;
+            font-size: 3em;
+            line-height: 1;
+            height: 1em;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
         }
 
         &.prev {
-            left : 0;
+            left: 0;
 
             &::before {
-                content : "\e0c5";
+                content: "\e0c5";
             }
         }
         &.next {
-            right : 0;
+            right: 0;
 
             &::before {
-                content : "\e0c6";
+                content: "\e0c6";
             }
         }
 
         &:hover {
-            .rgba(#fff; 90%);
+            .rgba(#FFFFFF; 90%);
+        }
+    }
+
+    .product-item {
+        background: none;
+        padding: 0;
+        & + .product-item {
+            margin-top: 0;
+        }
+    }
+
+}
+
+.carousel-container{
+    margin-top: 1.5rem;
+    margin-bottom: 1.7rem;
+    .product-title {
+        text-align: center;
+        background: @brand-primary;
+        color: @primary-color;
+        text-decoration: none;
+        padding: 0.7em;
+        margin-bottom: 0;
+        font-weight: 700;
+        line-height: 1;
+        font-family: @font-family-headings;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        .text-overflow();
+        .transition();
+        &:hover {
+            color: @black;
         }
     }
 }

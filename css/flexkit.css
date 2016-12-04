@@ -69,6 +69,37 @@
 .carousel .carousel-btn:hover {
   background: rgba(255, 255, 255, 0.9);
 }
+.carousel .product-item {
+  background: none;
+  padding: 0;
+}
+.carousel .product-item + .product-item {
+  margin-top: 0;
+}
+.carousel-container {
+  margin-top: 1.5rem;
+  margin-bottom: 1.7rem;
+}
+.carousel-container .product-title {
+  text-align: center;
+  background: #ff2934;
+  color: #FFF;
+  text-decoration: none;
+  padding: 0.7em;
+  margin-bottom: 0;
+  font-weight: 700;
+  line-height: 1;
+  font-family: Montserrat, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, serif;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s;
+}
+.carousel-container .product-title:hover {
+  color: #000000;
+}
 .smoke-base .smokebg {
   position: fixed;
   left: 0;

@@ -7,8 +7,10 @@
   padding: 5px;
 }
 .product .product-image {
-  border: 3px solid #bbbbbb;
   display: block;
+  padding-top: 2.7em;
+  padding-bottom: 2.7em;
+  background: #eeeeee;
 }
 .product .product-image img {
   width: 100%;
@@ -87,22 +89,66 @@
   text-align: center;
   text-transform: uppercase;
 }
+.product-item {
+  position: relative;
+  background: #FFF;
+  padding: 1em;
+}
 .product-item::after {
   content: "";
   display: table;
   clear: both;
 }
+.product-item + .product-item {
+  margin-top: 2.7em;
+}
 .product-item .product-image {
-  float: left;
-  margin-right: 2%;
-  width: 150px;
-  overflow: hidden;
+  display: block;
+  padding-top: 2.7em;
+  padding-bottom: 2.7em;
+  background: #eeeeee;
+}
+.product-item .product-image img {
+  -webkit-transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  transform: scale(1.01, 1.01);
+  transition: all ease 0.5s;
+}
+.product-item .product-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+.product-item .product-image:hover::after {
+  background: rgba(0, 0, 0, 0);
+}
+.product-item .product-image:hover img {
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
 }
 .product-item .product-title {
   display: block;
-  margin: 0 0 0.25em;
   font-size: 1.25em;
-  font-family: Montserrat, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, serif;
+  margin-bottom: 1.5rem;
+}
+.product-item .product-text {
+  padding: 1em 1.5em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  -webkit-filter: blur(0);
+}
+.product-item .product-text .divider {
+  padding-bottom: 0;
 }
 .product-item .product-price {
   font-weight: bold;
