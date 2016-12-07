@@ -340,8 +340,8 @@
   }
 }
 .news-container .news-item-title {
-  background: #ff2934;
-  color: #FFF;
+  background: rgba(0, 0, 0, 0.02);
+  color: #222222;
   text-decoration: none;
   padding: 0.7em;
   font-weight: 700;
@@ -355,7 +355,7 @@
   transition: all 0.3s;
 }
 .news-container .news-item-title:hover {
-  color: #000000;
+  color: #ff2934;
 }
 .news-container .news-item-date {
   margin-top: 0.5em;

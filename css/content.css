@@ -3069,8 +3069,10 @@ h2.icon-needle,
 }
 h3,
 .h3 {
-  font-size: 1.4em;
+  font-size: 1.2em;
+  font-weight: 700;
   line-height: 1.35;
+  text-transform: uppercase;
 }
 h4,
 .h4 {
@@ -3290,6 +3292,24 @@ dl.horizontal dd {
 }
 ul.list-unstyled {
   zoom: 1;
+}
+ul.list-checkmark {
+  zoom: 1;
+}
+ul.list-checkmark > li {
+  padding-left: 1.5em;
+}
+ul.list-checkmark > li::before {
+  float: left;
+  color: #ff2934;
+  margin-left: -1.5em;
+  margin-top: .35em;
+  font-family: flexkit-icons;
+  font-size: .75em;
+  content: '\e0a3';
+}
+ul.list-checkmark > li:hover::before {
+  color: #222222;
 }
 ul.list-select {
   border: 1px solid #bbbbbb;
