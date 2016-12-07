@@ -3,10 +3,11 @@
     .inline-block-wrap();
 
     li {
-        .grid-elements(2; @grid-margin-width; true; 1; 1);
-        background: @primary-color;
         padding: 1em;
         margin-bottom: 1.5rem;
+        .grid-elements(2; @grid-margin-width; true; 1; 1);
+        background: @primary-color;
+        border: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     a {

@@ -12,8 +12,9 @@
 //==================================================
 .product-item {
     position: relative;
-    background: @primary-color;
     padding: 1em;
+    background: @primary-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     .clearfix-mixin();
 
     &.grid {
@@ -69,7 +70,7 @@
         right: 0;
         top: 50%;
         .translate(0; -50%);
-        .divider{
+        .divider {
             padding-bottom: 0;
         }
     }

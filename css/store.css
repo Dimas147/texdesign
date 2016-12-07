@@ -19,8 +19,8 @@
   font-weight: bold;
 }
 .product .product-description-short {
-  border-bottom: 1px solid #bbbbbb;
-  border-top: 1px solid #bbbbbb;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1em 0;
 }
 .product .product-options-listing {
@@ -91,8 +91,9 @@
 }
 .product-item {
   position: relative;
-  background: #FFF;
   padding: 1em;
+  background: #FFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .product-item::after {
   content: "";

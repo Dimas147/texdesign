@@ -320,7 +320,7 @@ select,
 textarea,
 input {
   font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
-  border: 1px solid #bbbbbb;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #fff;
   color: #3f4041;
   transition: border 0.3s;
@@ -450,7 +450,7 @@ textarea.resize {
   line-height: 0;
   margin: 0;
   background: #fff;
-  border: 1px solid #bbbbbb;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   color: transparent;
 }
 .filed-upgrade ~ .checkbox_radio::before {
@@ -587,12 +587,13 @@ textarea.resize {
   vertical-align: middle;
 }
 .img_gallery li {
+  padding: 1em;
+  margin-bottom: 1.5rem;
   margin-left: 2%;
   margin-right: 0;
   width: 49%;
   background: #FFF;
-  padding: 1em;
-  margin-bottom: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .img_gallery li:nth-of-type(2n + 1) {
   margin-left: 0;

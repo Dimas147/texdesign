@@ -23,33 +23,35 @@
     </section>
 </div>
 
-<div class="parallax height-auto take-from-widget dark-section">
-    {$imageonly:other-news:1902:static}
+<section class="parallax height-auto take-from-widget dark-section">
+    {$imageonly:special-offers:1902:static}
     <div class="container sp-tp sp-bm">
         <section class="grid_12">
             <h2 class="text-center icon-needle">
                 <span class="divider white"></span>
-                {$header:other-news:static}
+                {$header:special-offers:static}
             </h2>
-            <div class="cycle-slideshow news-slider"
-                 data-cycle-slides=".slide"
-                 data-cycle-fx="scrollHorz"
-                 data-cycle-speed="200"
-                 data-cycle-timeout="20000"
-                 data-cycle-prev=".cycle-prev"
-                 data-cycle-next=".cycle-next"
-                 data-cycle-auto-height="calc">
-                {$newslist:_news in slider:2:desc}
-                <button class="action-button cycle-prev hide">Previous</button>
-                <button class="action-button cycle-next hide">Next</button>
+
+            <div class="carousel-container">
+                {$productlist:_products in slider:tagnames-special}
             </div>
+            <p class="divider white top">
+                <a href="#">Learn more</a>
+            </p>
         </section>
     </div>
-</div>
+</section>
 
 {$template:_footer}
 {$template:_mobile elements}
 {$template:_scripts}
 <script src="js/plugin/jquery.cycle2.min.js"></script>
+<script>
+    $(".carousel-container .product-list").addClass("carousel").attr({
+        "data-visible": "4",
+        "data-prev": "false",
+        "data-next": "false"
+    });
+</script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 .news-item when (@widget-news-list) {
-    background: @primary-color;
     padding: 1em;
+    background: @primary-color;
+    border: 1px solid @input-border-color;
 
     .cycle-slideshow & {
         background: none;
@@ -71,10 +72,11 @@
     .news-item {
         .grid-elements(2; @grid-margin-width; true; 1; 1);
         margin-bottom: 1.5rem;
+        border: 1px solid @input-border-color;
     }
     .news-item-title {
-        background: @brand-primary;
-        color: @primary-color;
+        .rgba(#000000; 2%);
+        color: @gray-darker;
         text-decoration: none;
         padding: 0.7em;
         font-weight: 700;
@@ -85,7 +87,7 @@
         .text-overflow();
         .transition();
         &:hover {
-            color: @black;
+            color: @brand-primary;
         }
     }
     .news-item-date {

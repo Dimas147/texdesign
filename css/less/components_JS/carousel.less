@@ -20,7 +20,6 @@
     }
 
     .carousel-btn {
-        .rgba(#FFFFFF; 75%);
         position: absolute;
         top: 0;
         bottom: 0;
@@ -29,6 +28,7 @@
         width: 3em;
         display: none;
         font-size: @font-size-base;
+        color: @gray-dark;
 
         &::before {
             font-family: @font-family-icons;
@@ -56,10 +56,6 @@
                 content: "\e0c6";
             }
         }
-
-        &:hover {
-            .rgba(#FFFFFF; 90%);
-        }
     }
 
     .product-item {
@@ -77,8 +73,8 @@
     margin-bottom: 1.7rem;
     .product-title {
         text-align: center;
-        background: @brand-primary;
-        color: @primary-color;
+        background: @primary-color;
+        color: @gray-darker;
         text-decoration: none;
         padding: 0.7em;
         margin-bottom: 0;

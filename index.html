@@ -5,7 +5,6 @@
 </head>
 <body class="index-page">
 <header role="banner">
-
     <h1 class="logo" itemscope itemtype="http://schema.org/Organization">
         <a href="{$website:url}" title="{$plugin:widcard:BizOrgName:notag}" itemprop="url">
             <span class="divider white">
@@ -14,13 +13,10 @@
             <span itemprop="name">{$plugin:widcard:BizOrgName:notag}</span>
         </a>
     </h1>
-
     <ul class="list-socials">
         {$template:_social links}
     </ul>
-
     <nav id="main-menu" class="d-visible" role="navigation">{$menu:main:_main menu}</nav>
-
     <div class="cycle-slideshow"
          data-cycle-slides=".slide"
          data-cycle-fx="scrollHorz"
@@ -39,6 +35,7 @@
                     <h2 class="h1 grid_12 slogan-top animated">
                         {$header:slide-text-top_key}
                     </h2>
+
                     <p class="grid_12 slogan-bottom">
                         {$header:slide-text-bottom_key}
                     </p>
@@ -50,26 +47,44 @@
         <div class="cycle-pager"></div>
     </div>
 </header>
-
 <section>
     {$featured:area:categories:8:250:img}
 </section>
-
-<div class="container">
-    <section class="grid_12 sp-tp sp-bm">
+<div class="container sp-tp sp-bm">
+    <section class="grid_12">
         <h2 class="text-center icon-needle">
             <span class="divider"></span>
             {$header:news}
         </h2>
 
         <div class="news-container">
-            {$newslist:_news list index:2:desc}
+            {$newslist:_news list index:4:desc}
         </div>
         <p class="divider inverse top">
             <a href="#">All news</a>
         </p>
     </section>
-    <section class="grid_12 sp-bm">
+</div>
+<section class="parallax height-auto take-from-widget dark-section">
+    {$imageonly:special-offers:1902:static}
+    <div class="container sp-tp sp-bm">
+        <section class="grid_12">
+            <h2 class="text-center icon-needle">
+                <span class="divider white"></span>
+                {$header:special-offers:static}
+            </h2>
+
+            <div class="carousel-container">
+                {$productlist:_products in slider:tagnames-special}
+            </div>
+            <p class="divider white top">
+                <a href="#">Learn more</a>
+            </p>
+        </section>
+    </div>
+</section>
+<div class="container sp-tp sp-bm">
+    <section class="grid_12">
         <h2 class="text-center icon-needle">
             <span class="divider"></span>
             {$header:gallery}
@@ -83,7 +98,6 @@
         </p>
     </section>
 </div>
-
 <div class="parallax height-auto take-from-widget dark-section">
     {$imageonly:testimonials-parallax:original:static}
     <div class="container sp-tp sp-bm">
@@ -106,8 +120,8 @@
                     <p class="text-bold mb0px">{$header:testimonial-author_key}</p>
                 </div>
                 {/repeat}
-                <button class="action-button cycle-prev">Previous</button>
-                <button class="action-button cycle-next">Next</button>
+                <button class="action-button cycle-prev hide">Previous</button>
+                <button class="action-button cycle-next hide">Next</button>
             </div>
             <p class="divider white top">
                 <a href="#">Learn more</a>
@@ -115,18 +129,14 @@
         </section>
     </div>
 </div>
-
 <div class="map">
     {$plugin:gmaps:bizlocation:2560:600:14}
 </div>
-
 {$template:_footer}
 {$template:_mobile elements}
 {$template:_scripts}
-
 <script src="js/plugin/jquery.cycle2.min.js"></script>
 <script src="js/plugin/imgToBackground.js"></script>
-
 {device:desktop,tablet}
 <script>
     $('.cycle-slideshow').on('cycle-pager-activated', function (event, optionHash, slideOptionsHash, currentSlideEl) {
@@ -135,6 +145,12 @@
     });
 </script>
 {/device}
-
+<script>
+    $(".carousel-container .product-list").addClass("carousel").attr({
+        "data-visible": "4",
+        "data-prev": "false",
+        "data-next": "false"
+    });
+</script>
 </body>
 </html>

@@ -33,7 +33,6 @@
   display: block;
 }
 .carousel .carousel-btn {
-  background: rgba(255, 255, 255, 0.75);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -42,6 +41,7 @@
   width: 3em;
   display: none;
   font-size: 20px;
+  color: #555555;
 }
 .carousel .carousel-btn::before {
   font-family: flexkit-icons;
@@ -66,9 +66,6 @@
 .carousel .carousel-btn.next::before {
   content: "\e0c6";
 }
-.carousel .carousel-btn:hover {
-  background: rgba(255, 255, 255, 0.9);
-}
 .carousel .product-item {
   background: none;
   padding: 0;
@@ -82,8 +79,8 @@
 }
 .carousel-container .product-title {
   text-align: center;
-  background: #ff2934;
-  color: #FFF;
+  background: #FFF;
+  color: #222222;
   text-decoration: none;
   padding: 0.7em;
   margin-bottom: 0;
