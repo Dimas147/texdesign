@@ -2,12 +2,12 @@
     {$news:actions}
     <div class="grid_6">
         <a class="news-item-image" href="{$news:url}">
-            <img src="{$news:preview}" alt="{$news:title:inline}"/>
+            <img src="{$news:preview:crop:570x258}" alt="{$news:title:inline}"/>
         </a>
     </div>
     <div class="grid_6 text-left">
         <a class="news-item-title h3 mt0px text-uppercase" href="{$news:url}">{$news:title}</a>
-        <time class="news-item-date fs14" datetime="{$news:date:Y-m-d}">{$news:date: M d, Y}</time>
+        <time class="news-item-date icon-calendar" datetime="{$news:date:Y-m-d}">{$news:date: d / m / Y}</time>
         <p class="news-item-description">{$news:teaser}</p>
         <p class="news-item-tags">{$news:tags}</p>
     </div>

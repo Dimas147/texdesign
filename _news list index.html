@@ -1,8 +1,8 @@
 <article class="news-item">
     {$news:actions}
     <a class="news-item-image" href="{$news:url}">
-        <img src="{$news:preview}" alt="{$news:title:inline}"/>
+        <img src="{$news:preview:crop:570x258}" alt="{$news:title:inline}"/>
     </a>
     <a class="news-item-title" href="{$news:url}">{$news:title}</a>
-    <time class="news-item-date icon-history" datetime="{$news:date:Y-m-d}">{$news:date: M d, Y}</time>
+    <time class="news-item-date icon-calendar" datetime="{$news:date:Y-m-d}">{$news:date: d / m / Y}</time>
 </article>

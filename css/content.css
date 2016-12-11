@@ -3231,7 +3231,7 @@ blockquote.cloud.left.border::before {
 }
 ul,
 ol {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   padding-left: 2.5em;
 }
 ul::after,

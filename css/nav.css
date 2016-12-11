@@ -261,6 +261,10 @@
 .cycle-slideshow .news-item {
   background: none;
   padding: 0;
+  border: none;
+}
+.cycle-slideshow .news-item .news-item-image {
+  background: #FFF;
 }
 .news-item .news-item-image {
   position: relative;
@@ -281,7 +285,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.05);
   transition: all 0.3s;
 }
 .news-item .news-item-image:hover::after {
@@ -300,6 +304,14 @@
 }
 .news-item .news-item-date {
   display: block;
+  margin-top: 0.5em;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+.news-item .news-item-date::before {
+  font-weight: bold;
+  padding-right: 0.5em;
+  margin-top: -0.25em;
 }
 .news-item .news-item-description {
   display: block;
@@ -310,6 +322,21 @@
 .news-container {
   margin-top: 2.7rem;
   font-size: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: false;
+  -ms-flex-direction: false;
+  flex-direction: false;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 .news-container >* {
   font-size: 20px;
@@ -352,23 +379,10 @@
   font-family: Montserrat, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, serif;
   text-transform: uppercase;
   font-size: 1.2em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   transition: all 0.3s;
 }
 .news-container .news-item-title:hover {
   color: #ff2934;
-}
-.news-container .news-item-date {
-  margin-top: 0.5em;
-  font-size: 0.75em;
-  font-weight: bold;
-}
-.news-container .news-item-date::before {
-  font-weight: bold;
-  padding-right: 0.5em;
-  margin-top: -0.25em;
 }
 .news-room {
   margin-top: 2.7rem;
