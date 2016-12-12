@@ -3848,3 +3848,11 @@ hr.dotted {
   font-size: 0.85em;
   font-weight: 700;
 }
+.divider.top a p {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+.divider.top a p:hover {
+  color: #ff2934;
+}

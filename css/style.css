@@ -111,6 +111,9 @@ footer .footer-columns a:hover {
 .copyright {
   margin-bottom: 0;
 }
+.learn-more::before {
+  content: "������ ������";
+}
 form::after {
   content: "";
   display: table;
