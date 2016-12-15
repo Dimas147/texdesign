@@ -14,7 +14,13 @@
             <span class="divider"></span>
             {$page:h1}
         </h2>
-        {$form:contact-form:recaptcha:custom:Submit}
+        {$form:contact-form:recaptcha:custom:{$prepop:submit-contact:text:static:readonly}}
+        {adminonly}
+        <div class="panel">
+            <div class="panel-header">{$header:submit:static}</div>
+            <div class="panel-content">{$prepop:submit-contact:text:static}</div>
+        </div>
+        {/adminonly}
     </section>
 </div>
 

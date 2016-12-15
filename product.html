@@ -20,8 +20,17 @@
         </article>
 
         <article class="grid_7 omega t-grid_3" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-            <p class="product-description-short" itemprop="description">{$product:description}</p>
-            {$quote:form}
+            <div class="product-description-short" itemprop="description">
+                {$content:product-content}
+            </div>
+            <p class="notification">{$header:product-order-header:static}</p>
+            {$form:product-form:recaptcha:custom:{$prepop:submit:text:static:readonly}}
+            {adminonly}
+            <div class="panel">
+                <div class="panel-header">{$header:submit:static}</div>
+                <div class="panel-content">{$prepop:submit:text:static}</div>
+            </div>
+            {/adminonly}
         </article>
     </div>
 </section>
@@ -38,7 +47,7 @@
                 {$productlist:_products in slider:sametags}
             </div>
             <p class="divider white top">
-                <a href="#">Learn more</a>
+                {$fastbutton:special-Offers:static}
             </p>
         </section>
     </div>

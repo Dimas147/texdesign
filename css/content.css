@@ -3842,17 +3842,109 @@ hr.dotted {
   top: -0.1rem;
   bottom: auto;
 }
-.divider.top a {
+.divider a,
+.divider span {
   text-transform: uppercase;
   font-family: Montserrat, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, serif;
   font-size: 0.85em;
   font-weight: 700;
 }
-.divider.top a p {
+.divider a p {
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 0;
 }
-.divider.top a p:hover {
+.divider a p:hover {
   color: #ff2934;
+}
+.panel {
+  color: inherit;
+  border: 1px solid #bbbbbb;
+  margin-bottom: 2em;
+  padding: 0;
+}
+.panel .panel-header,
+.panel .panel-content,
+.panel .panel-footer {
+  margin: 0;
+  padding: 8px 12px;
+}
+.panel .panel-header::after,
+.panel .panel-content::after,
+.panel .panel-footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.panel .panel-header {
+  display: block;
+  background: #eeeeee;
+  color: #222222;
+  border-bottom: inherit;
+  font-size: 1.25em;
+  font-family: Montserrat, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, serif;
+}
+.panel .panel-content {
+  background: #fff;
+  overflow: auto;
+}
+.panel .panel-footer {
+  background: #fcfcfc;
+  border-top: inherit;
+  border-top-color: #efefef;
+}
+.panel.primary {
+  border-color: #ff7178;
+}
+.panel.primary .panel-header {
+  background: #ffc6c9;
+  color: #88161c;
+}
+.panel.success {
+  border-color: #8ada8c;
+}
+.panel.success .panel-header {
+  background: #d0f0d1;
+  color: #2a6a2c;
+}
+.panel.warning {
+  border-color: #ffd691;
+}
+.panel.warning .panel-header {
+  background: #ffefd3;
+  color: #886730;
+}
+.panel.error {
+  border-color: #f69593;
+}
+.panel.error .panel-header {
+  background: #fcd5d4;
+  color: #813331;
+}
+.panel.info {
+  border-color: #70caf3;
+}
+.panel.info .panel-header {
+  background: #c6eafa;
+  color: #155e7f;
+}
+.panel.collapse .panel-header {
+  position: relative;
+  padding-right: 28px;
+}
+.panel.collapse .collapse-btn {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.3);
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 0;
+}
+.panel.collapse .collapse-btn::before {
+  font-size: 16px;
 }

@@ -5,6 +5,7 @@ html when (@widget-rotator-full-height) {
 }
 
 body {
+
     // custom scroll-bar
     .scroll-bar();
     background-image: url("http://www.texdesign.pchelka.kh.ua/media/bg/original/bg_3.jpg");
@@ -108,9 +109,9 @@ footer {
                 color: @gray-darker;
             }
         }
-        a{
+        a {
             color: @text-color;
-            &:hover{
+            &:hover {
                 color: @brand-primary;
             }
         }
@@ -147,12 +148,48 @@ footer {
     pointer-events: none;
 }
 
-.copyright{
+.copyright {
     margin-bottom: 0;
 }
 
-.learn-more{
-    &::before{
+.learn-more {
+    &::before {
         content: "Узнать больше";
     }
+}
+
+.testimonial-item {
+    background: @primary-color;
+    border: 1px solid @input-border-color;
+    & + .testimonial-item {
+        margin-top: 2.7rem;
+    }
+    blockquote {
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        &::before, &::after {
+            position: static;
+            color: @brand-primary;
+        }
+        &::before {
+            margin-right: 0.5em;
+        }
+        &::after {
+            margin-left: 0.5em;
+        }
+    }
+    .divider {
+        margin-top: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+.notification{
+    background: @gray-lighter;
+    margin-top: 20px;
+    padding: 15px;
+    border-left: 10px solid @brand-primary;
+    font-weight: bold;
 }

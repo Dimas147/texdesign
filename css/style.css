@@ -114,6 +114,41 @@ footer .footer-columns a:hover {
 .learn-more::before {
   content: "������ ������";
 }
+.testimonial-item {
+  background: #FFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.testimonial-item + .testimonial-item {
+  margin-top: 2.7rem;
+}
+.testimonial-item blockquote {
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.testimonial-item blockquote::before,
+.testimonial-item blockquote::after {
+  position: static;
+  color: #ff2934;
+}
+.testimonial-item blockquote::before {
+  margin-right: 0.5em;
+}
+.testimonial-item blockquote::after {
+  margin-left: 0.5em;
+}
+.testimonial-item .divider {
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.notification {
+  background: #eeeeee;
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 10px solid #ff2934;
+  font-weight: bold;
+}
 form::after {
   content: "";
   display: table;
@@ -837,6 +872,9 @@ textarea.resize {
 }
 .cycle-slideshow.news-slider .divider {
   margin-top: 2em;
+}
+.cycle-slideshow.news-slider .news-item-date {
+  color: #FFF;
 }
 .cycle-slideshow.top-slider .slide {
   height: 100%;

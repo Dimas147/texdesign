@@ -114,10 +114,10 @@
                  data-cycle-prev=".cycle-prev"
                  data-cycle-next=".cycle-next"
                  data-cycle-auto-height="calc">
-                {repeat:testimonial-slider:key:0}
+                {repeat:testimonial-slider:key:0:static}
                 <div class="slide text-center">
-                    <blockquote>{$content:testimonial-text_key}</blockquote>
-                    <p class="text-bold mb0px">{$header:testimonial-author_key}</p>
+                    <blockquote>{$content:testimonial-text_key:static}</blockquote>
+                    <p class="text-bold mb0px">{$header:testimonial-author_key:static}</p>
                 </div>
                 {/repeat}
                 <button class="action-button cycle-prev hide">Previous</button>
