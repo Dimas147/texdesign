@@ -2716,6 +2716,32 @@ a.inherit-color:hover {
 .mt {
   margin-top: 2.7rem;
 }
+.sp-tp {
+  padding-top: 7.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .sp-tp {
+    padding-top: 5rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sp-tp {
+    padding-top: 2.5rem;
+  }
+}
+.sp-bm {
+  padding-bottom: 7.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .sp-bm {
+    padding-bottom: 5rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sp-bm {
+    padding-bottom: 2.5rem;
+  }
+}
 .rss {
   color: #f26522;
 }
@@ -3800,7 +3826,7 @@ hr.dotted {
   position: relative;
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
-  min-width: 17rem;
+  min-width: 12rem;
 }
 .divider::before,
 .divider::after {

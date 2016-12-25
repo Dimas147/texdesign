@@ -2,6 +2,9 @@
     padding: 1em;
     background: @primary-color;
     border: 1px solid @input-border-color;
+    @media only screen and (max-width : @responsive-size-mobile) {
+        padding: 0;
+    }
 
     .cycle-slideshow & {
         background: none;
@@ -44,6 +47,9 @@
 
     .news-item-title {
         display: block;
+        //@media only screen and (max-width : @responsive-size-tablet) {
+        //    margin-top: 1.5em !important;
+        //}
     }
 
     .newslog-admin-actions {
@@ -62,6 +68,9 @@
             padding-right: 0.5em;
             margin-top: -0.25em;
 
+        }
+        @media only screen and (max-width : @responsive-size-tablet) {
+            margin-bottom: 0.5em;
         }
     }
 
@@ -105,6 +114,11 @@
             color: @brand-primary;
         }
     }
+    .news-item-date{
+        @media only screen and (max-width : @responsive-size-mobile) {
+            padding-left: 1.33em;
+        }
+    }
 }
 
 .news-room {
@@ -117,10 +131,12 @@
     }
     .news-text {
         padding: 1em 1.5em;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        .translate(0; -50%);
+        @media only screen and (min-width : @responsive-size-tablet) {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            .translate(0; -50%);
+        }
         .divider {
             padding-bottom: 0;
         }
@@ -131,5 +147,8 @@
     }
     .news-item-date {
         margin-bottom: 1.5rem;
+        @media only screen and (max-width : @responsive-size-tablet) {
+            margin-bottom: 0.5em;
+        }
     }
 }

@@ -1,4 +1,5 @@
-<header role="banner" class="parallax take-from-widget">
+{device:desktop,tablet}
+<header role="banner" class="parallax take-from-widget m-hide">
     {$imageonly:header-bg:1902:static}
     <div class="logo h1" itemscope itemtype="http://schema.org/Organization">
         <a href="{$website:url}" title="{$plugin:widcard:BizOrgName:notag}" itemprop="url">
@@ -13,3 +14,4 @@
     </ul>
     <nav id="main-menu" class="d-visible" role="navigation">{$menu:main:_main menu}</nav>
 </header>
+{/device}

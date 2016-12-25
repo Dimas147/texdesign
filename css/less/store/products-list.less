@@ -33,6 +33,7 @@
         padding-top: 2.7em;
         padding-bottom: 2.7em;
         background: @gray-lighter;
+        text-align: center;
         img {
             .scale(1.01);
             .transition(all ease 0.5s);
@@ -66,10 +67,15 @@
 
     .product-text {
         padding: 1em 1.5em;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        .translate(0; -50%);
+        @media only screen and (min-width : @responsive-size-tablet) {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            .translate(0; -50%);
+        }
+        @media only screen and (max-width : @responsive-size-tablet) {
+            margin-top: 1.5em;
+        }
         .divider {
             padding-bottom: 0;
         }

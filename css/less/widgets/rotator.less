@@ -157,6 +157,10 @@
         blockquote {
             padding-left: 3rem;
             padding-right: 3rem;
+            @media only screen and (max-width : @responsive-size-mobile) {
+                padding-left: 0.25rem;
+                padding-right: 0.25rem;
+            }
         }
     }
     &.news-slider {
@@ -166,6 +170,11 @@
         }
         .news-item-date {
             color: @primary-color;
+        }
+        @media only screen and (max-width : @responsive-size-tablet) {
+            .text-left{
+                margin-top: 1.5em;
+            }
         }
     }
     &.top-slider {

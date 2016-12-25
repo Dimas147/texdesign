@@ -155,8 +155,11 @@ select optgroup{
 //==================================================
 .main_menu, .listpages, .listcategories, .featureditem, .featureapage, .search-results, .relatedpages, .listxrss, .related-products{
     .clearfix-mixin();
+}
+.listpages, .featureditem, .featureapage{
     .inline-block-wrap();
 }
+
 //fix for Safari 3
 & when (@webkit){
     ::i-block-chrome, .main_menu,

@@ -363,17 +363,6 @@ select optgroup {
   font-size: inherit;
   font-family: inherit;
 }
-.main_menu,
-.listpages,
-.listcategories,
-.featureditem,
-.featureapage,
-.search-results,
-.relatedpages,
-.listxrss,
-.related-products {
-  font-size: 0;
-}
 .main_menu::after,
 .listpages::after,
 .listcategories::after,
@@ -387,15 +376,14 @@ select optgroup {
   display: table;
   clear: both;
 }
-.main_menu >*,
+.listpages,
+.featureditem,
+.featureapage {
+  font-size: 0;
+}
 .listpages >*,
-.listcategories >*,
 .featureditem >*,
-.featureapage >*,
-.search-results >*,
-.relatedpages >*,
-.listxrss >*,
-.related-products >* {
+.featureapage >* {
   font-size: 20px;
   display: inline-block;
   vertical-align: middle;

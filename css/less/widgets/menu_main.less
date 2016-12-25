@@ -1,13 +1,4 @@
 .main_menu when (@menu-main) {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 2rem;
-    z-index: 105;
-    text-align: center;
-
-    .inline-block-wrap(middle; ~'>*'; 1.3rem);
-
     & when not(@nav-bg = transparent) {
         background: @nav-bg;
     }
@@ -18,10 +9,6 @@
     & > li {
         position: relative;
         font-weight: bold;
-
-        & + li{
-            margin-left: 2rem;
-        }
 
         &:hover {
             & when not(@nav-bg = @nav-bg-li-hover) {
@@ -116,7 +103,23 @@
             }
         }
     }
-    .index-page & {
-        bottom: 5.5rem;
+    @media only screen and (min-width : @responsive-size-tablet) {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 2rem;
+        z-index: 105;
+        text-align: center;
+        .inline-block-wrap(middle; ~'>*'; 1.3rem);
+
+        & > li {
+            & + li{
+                margin-left: 2rem;
+            }
+        }
+
+        .index-page & {
+            bottom: 5.5rem;
+        }
     }
 }
