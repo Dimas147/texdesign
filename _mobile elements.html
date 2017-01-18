@@ -1,10 +1,34 @@
+<!-- Top bar for mobile, with button show/hide menu -->
 <div class="mobile-bar top clearfix">
-    <span class="menu-btn left icon btn icon-list2" data-menu-position="left"></span>
-    <a href="tel:{$plugin:widcard:BizTelephone:notag}" class="btn transparent icon icon-phone fl-right">{$plugin:widcard:BizTelephone:notag}</a>
+    <span class="btn icon-menu" data-refer="main"></span>
+    <span class="title">{$page:h1}</span>
+    <span class="dropdown-btn btn icon-menu" data-refer="drop"></span>
+    <div class="tabs">
+        <ul class="items-wrap">
+            <li><a href="#">First Item</a></li>
+            <li><a href="#" class="current">Second Item</a></li>
+            <li><a href="#">Third Item</a></li>
+            <li><a href="#">Fourth Item</a></li>
+            <li><a href="#">Fifth Item</a></li>
+        </ul>
+    </div>
 </div>
 
-<aside class="mobile-menu left">
+<aside class="m-menu left" data-el="main">
+    <div class="menu-top-header"></div>
+    {$menu:main:_main menu}
+</aside>
+<aside class="m-menu dropdown right top" data-el="drop">
     {$menu:main:_main menu}
 </aside>
 
+<!-- Bottom bar for mobile, with button show/hide menu -->
+<div class="mobile-bar bottom clearfix">
+    <div class="_column_5 margin-none one-line large">
+        <!-- Include social share link -->
+        {$template:_social share}
+    </div>
+</div>
+
+<!-- mobile loader -->
 <span class="mobile-loader"></span>

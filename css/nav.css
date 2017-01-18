@@ -495,7 +495,7 @@ extend ' .mobile-menu li' has no matches
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 91;
+    z-index: 111;
   }
   [data-menu-open]::after,
   [data-overlay]::after {
@@ -506,7 +506,7 @@ extend ' .mobile-menu li' has no matches
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 90;
+  z-index: 110;
   font-family: "Roboto", Tahoma, Arial;
   display: -webkit-box;
   display: -webkit-flex;
@@ -686,7 +686,7 @@ extend ' .mobile-menu li' has no matches
 }
 @media only screen and (max-width: 800px) {
   .mobile-menu {
-    z-index: 92;
+    z-index: 112;
     transition: all 0.3s;
   }
   .mobile-menu.top {
@@ -748,7 +748,7 @@ extend ' .mobile-menu li' has no matches
 .m-menu {
   width: 260px;
   position: fixed;
-  z-index: 92;
+  z-index: 120;
   overflow: auto;
   background: #ffffff;
   display: none;
@@ -850,7 +850,7 @@ extend ' .mobile-menu li' has no matches
   background: #fff !important;
   color: #646768 !important;
   position: absolute;
-  z-index: 92 !important;
+  z-index: 112 !important;
   width: 250px;
   display: none;
   margin: 0 !important;

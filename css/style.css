@@ -983,7 +983,7 @@ html.tablet::before {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 101;
+  z-index: 131;
   background-color: #ff2934;
 }
 html.mobile .mobile-loader,
@@ -994,7 +994,7 @@ html.tablet .mobile-loader {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 102;
+  z-index: 132;
 }
 html.mobile .mobile-loader::after,
 html.tablet .mobile-loader::after,
