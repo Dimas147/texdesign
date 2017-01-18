@@ -4,8 +4,8 @@
 @dropdown-bg                : #fff;
 @dropdown-color             : @text-color;
 @dropdown-width             : 250px;
-@dropdown-margin-vertical   : 5px;
-@dropdown-margin-horizontal : 5px;
+@dropdown-margin-vertical   : 10px;
+@dropdown-margin-horizontal : 10px;
 
 body when (@responsive), (@adaptive) {
     &[data-dropdown-open]:extend(body[data-menu-open]) {
@@ -22,7 +22,7 @@ body when (@responsive), (@adaptive) {
         }
     }
 }
-.dropdown-menu {
+.dropdown-menu, .mobile-menu.dropdown {
     background : @dropdown-bg !important;
     color      : @dropdown-color !important;
     position   : absolute;
@@ -31,7 +31,7 @@ body when (@responsive), (@adaptive) {
     display    : none;
     margin     : 0 !important;
     overflow   : auto;
-    .box-shadow(0 2px 30px fade(#000, 30%));
+    .box-shadow(0 0 7px fade(#000, 50%));
 
     &.open {
         display : block;

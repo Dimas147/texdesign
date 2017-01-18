@@ -53,10 +53,10 @@
         font-family : "@{fontname}";
         src         : url("@{fontfile}.eot");
         src         : url("@{fontfile}.eot?#iefix") format("embedded-opentype"),
-                      url("@{fontfile}.woff") format("woff"),
-//                      url("@{fontfile}.otf") format("opentype"),
-//                      url("@{fontfile}.svg#@{fontname}") format("svg"),
-                      url("@{fontfile}.ttf") format("truetype");
+        url("@{fontfile}.woff") format("woff"),
+            //                      url("@{fontfile}.otf") format("opentype"),
+            //                      url("@{fontfile}.svg#@{fontname}") format("svg"),
+        url("@{fontfile}.ttf") format("truetype");
         font-weight : @fontweight;
         font-style  : @fontstyle;
     }
@@ -65,7 +65,7 @@
     @font-face {
         font-family : "@{fontname}";
         src         : url("@{fontfile}.woff") format("woff"),
-                      url("@{fontfile}.ttf") format("truetype");
+        url("@{fontfile}.ttf") format("truetype");
         font-weight : @fontweight;
         font-style  : @fontstyle;
     }
@@ -363,7 +363,18 @@
         behavior : url('/themes/@{theme-name}/js/system/PIE.php');
     }
 }
-
+.f-grid-elements(@num-column; @margin : @grid-margin-width; @align: stretch; @alignContent: flex-start; @full: false; @el: '*';@flexible: false) {
+    .flexbox(row; wrap; @align);
+    .flex-justify-content(@alignContent);
+    & > @{el} when not(@full) {
+        margin-left  : unit(@margin / 2, ~"%");
+        margin-right : unit(@margin / 2, ~"%");
+        width        : (100% / @num-column) - @margin;
+        & when (@flexible) {
+            .flex-flexible(1; 1; auto);
+        }
+    }
+}
 // -- Grid Elements
 .grid-elements(@num-column; @margin : @grid-margin-width; @full: false; @tablet-column : 2; @mobile-column : 1; @print-column : 0; @style-switch : true) when (@num-column > 0) {
     & when (@style-switch) and not(@full) {
@@ -513,7 +524,7 @@
 .flexbox(@direction : false; @wrap : nowrap; @align : stretch) {
     & when (@webkit) { display : -webkit-box; }
     & when (@webkit) { display : -webkit-flex; }
-//    & when (@moz) { display : -moz-box; }
+    //    & when (@moz) { display : -moz-box; }
     & when (@ie) { display : -ms-flexbox; }
     display : flex;
 
@@ -525,17 +536,23 @@
 .flex-direction(@direction : column) {
     & when (@webkit) and (@direction = row), (@direction = column) { -webkit-box-direction : normal; }
     & when (@webkit) and not(@direction = row) and not(@direction = column) { -webkit-box-direction : reverse; }
-//    & when (@moz) and (@direction = row), (@direction = column) { -moz-box-direction : normal; }
-//    & when (@moz) and not(@direction = row) and not(@direction = column) { -moz-box-direction : reverse; }
+    //    & when (@moz) and (@direction = row), (@direction = column) { -moz-box-direction : normal; }
+    //    & when (@moz) and not(@direction = row) and not(@direction = column) { -moz-box-direction : reverse; }
 
     & when (@webkit) and (@direction = row) { -webkit-box-orient : horizontal; }
     & when (@webkit) and (@direction = column) { -webkit-box-orient : vertical; }
-//    & when (@moz) and (@direction = row) { -moz-box-orient : horizontal; }
-//    & when (@moz) and (@direction = column) { -moz-box-orient : vertical; }
+    //    & when (@moz) and (@direction = row) { -moz-box-orient : horizontal; }
+    //    & when (@moz) and (@direction = column) { -moz-box-orient : vertical; }
 
     & when (@webkit) { -webkit-flex-direction : @direction; }
     & when (@ie) { -ms-flex-direction : @direction; }
     flex-direction : @direction;
+}
+// @wrap = flex-start, flex-end, center, space-around, space-between
+.flex-justify-content(@align : flex-start) {
+    & when (@webkit) { -webkit-justify-content : @align; }
+    //& when (@ie) { -ms-justify-content: @align; }
+    justify-content : @align;
 }
 // @wrap = nowrap, wrap, wrap-reverse
 .flex-wrap(@wrap : nowrap) {
@@ -548,24 +565,28 @@
     @alignOld : replace(~'@{align}', 'flex-', '');
     & when (@webkit) { -webkit-box-align : @alignOld; }
     & when (@webkit) { -webkit-align-items : @align; }
-//    & when (@moz) { -moz-box-align : @alignOld; }
+    //    & when (@moz) { -moz-box-align : @alignOld; }
     & when (@ie) { -ms-flex-align : @alignOld; }
     align-items : @align;
 }
 .flex-box-order(@order) {
     & when (@webkit) { -webkit-box-ordinal-group : @order + 1; }
-//    & when (@moz) { -moz-box-ordinal-group : @order + 1; }
+    //    & when (@moz) { -moz-box-ordinal-group : @order + 1; }
     & when (@webkit) { -webkit-order : @order; }
     & when (@ie) { -ms-flex-order : @order; }
     order : @order;
 }
-.flex-box-size(@size : 1) {
-    & when (@webkit) { -webkit-box-flex : @size; }
-//    & when (@moz) { -moz-box-flex : @size; }
-    & when (@webkit) { -webkit-flex : @size 1 auto; }
-    & when (@ie) { -ms-flex : @size 1 auto; }
-    flex : @size 1 auto;
+.flex-box-size(@grow: 1; @shrink: 0; @basis: auto) {
+    & when (@webkit) { -webkit-box-flex : @grow; }
+    //    & when (@moz) { -moz-box-flex : @size; }
+    & when (@webkit) { -webkit-flex : @grow @shrink @basis; }
+    & when (@ie) { -ms-flex : @grow @shrink @basis; }
+    flex : @grow @shrink @basis;
 }
+.flex-flexible(@grow: 1; @shrink: 0; @basis: auto) {
+    .flex-box-size(@grow; @shrink; @basis);
+}
+
 // @align = auto, flex-start, flex-end, center, baseline, stretch
 .flex-box-align(@align : auto) {
     & when (@webkit) { -webkit-align-self : @align; }

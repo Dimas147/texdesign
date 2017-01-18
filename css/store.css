@@ -5,12 +5,14 @@
   background-color: #ff2934;
   color: #FFF;
   padding: 5px;
+  z-index: 1;
 }
 .product .product-image {
   display: block;
   padding-top: 2.7em;
   padding-bottom: 2.7em;
   background: #eeeeee;
+  overflow: hidden;
 }
 .product .product-image img {
   width: 100%;
@@ -112,6 +114,7 @@
   padding-bottom: 2.7em;
   background: #eeeeee;
   text-align: center;
+  overflow: hidden;
 }
 .product-item .product-image img {
   -webkit-transform: scale(1.01, 1.01);
