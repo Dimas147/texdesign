@@ -607,7 +607,7 @@ extend ' .mobile-menu li' has no matches
   margin: initial;
   font-size: 18px;
 }
-.tabs {
+.m-tabs {
   display: none;
 }
 .menu-btn:hover,

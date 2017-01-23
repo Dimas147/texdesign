@@ -7,8 +7,8 @@
         @media only screen and (max-width: @responsive-size-mobile) {
             padding: 0;
         }
-        margin-bottom: 1.5rem;
         .grid-elements(2; @grid-margin-width; true; 2; 2);
+        margin-bottom: 2%;
         background: @primary-color;
         border: 1px solid rgba(0, 0, 0, 0.1);
     }
@@ -32,7 +32,7 @@
             .rgba(#000000; 2%);
             .transition();
         }
-        @media only screen and (min-width : @responsive-size-tablet) {
+        @media only screen and (min-width: @responsive-size-tablet) {
             &:hover {
                 &::after {
                     .rgba(#000000; 0%);
@@ -63,20 +63,25 @@
     }
     .product-gallery & {
         margin-top: 1rem;
-        //margin-bottom: 1rem;
         max-height: 450px;
         overflow-y: auto;
         li {
-            margin-bottom: 2%;
             display: none;
             &:nth-child(1), &:nth-child(2) {
                 .inline-block();
             }
         }
-        &.visible{
-            li{
+        &.visible {
+            li {
                 .inline-block();
             }
+        }
+    }
+    .tabs & {
+        margin-top: 0;
+        margin-bottom: -2%;
+        li{
+            .grid-elements(3; @grid-margin-width; true; 2; 2);
         }
     }
 }

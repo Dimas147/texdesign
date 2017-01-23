@@ -2558,6 +2558,48 @@ a.inherit-color:hover {
 .p0px {
   padding: 0px !important;
 }
+.pt0px {
+  padding-top: 0px !important;
+}
+.pt5px {
+  padding-top: 5px !important;
+}
+.pt10px {
+  padding-top: 10px !important;
+}
+.pt15px {
+  padding-top: 15px !important;
+}
+.pt20px {
+  padding-top: 20px !important;
+}
+.pt25px {
+  padding-top: 25px !important;
+}
+.pt30px {
+  padding-top: 30px !important;
+}
+.pb0px {
+  padding-bottom: 0px !important;
+}
+.pb5px {
+  padding-bottom: 5px !important;
+}
+.pb10px {
+  padding-bottom: 10px !important;
+}
+.pb15px {
+  padding-bottom: 15px !important;
+}
+.pb20px {
+  padding-bottom: 20px !important;
+}
+.pb25px {
+  padding-bottom: 25px !important;
+}
+.pb30px {
+  padding-bottom: 30px !important;
+}
 .pl-grid {
   padding-left: 1%;
 }
