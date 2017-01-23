@@ -81,10 +81,6 @@
   border-color: #f5000d;
   background-color: rgba(0, 0, 0, 0);
 }
-.product .tcart-add:active,
-.product .tcart-add.active {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
-}
 .show-more {
   border-bottom: 1px solid #DDDDDD;
   border-top: 1px solid #DDDDDD;
@@ -109,6 +105,7 @@
   margin-top: 2.7em;
 }
 .product-item .product-image {
+  position: relative;
   display: block;
   padding-top: 2.7em;
   padding-bottom: 2.7em;
@@ -132,13 +129,15 @@
   background: rgba(0, 0, 0, 0.05);
   transition: all 0.3s;
 }
-.product-item .product-image:hover::after {
-  background: rgba(0, 0, 0, 0);
-}
-.product-item .product-image:hover img {
-  -webkit-transform: scale(1.1, 1.1);
-  -ms-transform: scale(1.1, 1.1);
-  transform: scale(1.1, 1.1);
+@media only screen and (min-width: 800px) {
+  .product-item .product-image:hover::after {
+    background: rgba(0, 0, 0, 0);
+  }
+  .product-item .product-image:hover img {
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
 }
 .product-item .product-title {
   display: block;
@@ -198,10 +197,6 @@
   color: #000;
   border-color: #f5000d;
   background-color: rgba(0, 0, 0, 0);
-}
-.product-item .tcart-add:active,
-.product-item .tcart-add.active {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
 }
 .ui-state-error,
 .errors {
@@ -1096,10 +1091,6 @@
   color: #000;
   border-color: #f5000d;
   background-color: rgba(0, 0, 0, 0);
-}
-#user-grid-part ul.user-stats li:active,
-#user-grid-part ul.user-stats li.active {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
 }
 #user-grid-part .user-orders-range {
   margin: 0 0 1em;

@@ -6,7 +6,6 @@
 <body>
 {$template:_header}
 <section class="container product sp-tp sp-bm" itemscope="" itemtype="http://schema.org/Product">
-
     <h1 class="h2 text-center icon-needle" role="heading" itemprop="name">
         <span class="divider"></span>
         {$product:name}
@@ -15,11 +14,24 @@
         <article class="grid_5 alpha">
             {$product:editproduct}
             <a class="_lbox product-image" href="{$product:photourl:original}">
-                <img itemprop="image" src="{$product:photourl:medium}" alt="{$product:name}"/>
+                <img itemprop="image" src="{$product:photourl:original}" alt="{$product:name}"/>
             </a>
+            <div class="product-gallery">
+                {$content:product-gallery}
+            </div>
+            <p class="text-center">
+                <button class="hide" id="show-more">
+                    <span>
+                        {$header:product-gallery-show-1:static}
+                    </span>
+                    <span>
+                        {$header:product-gallery-show-2:static}
+                    </span>
+                </button>
+            </p>
         </article>
 
-        <article class="grid_7 omega t-grid_3" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <article class="grid_7 omega" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             <div class="product-description-short" itemprop="description">
                 {$content:product-content}
             </div>
@@ -34,7 +46,6 @@
         </article>
     </div>
 </section>
-
 <section class="parallax height-auto take-from-widget dark-section">
     {$imageonly:other-news:1902:static}
     <div class="container sp-tp sp-bm">
@@ -55,13 +66,22 @@
 {$template:_footer}
 {$template:_mobile elements}
 {$template:_scripts}
+<script src="js/plugin/jquery.carousel.min.js"></script>
 <script>
     $( ".carousel-container .product-list").addClass("carousel").attr({
         "data-visible": "4",
         "data-prev": "false",
         "data-next": "false"
     });
+    var NumberOfElements = $( ".product-gallery .img_gallery li").length;
+    console.log(NumberOfElements);
+    if (NumberOfElements > 2){
+        $( "#show-more").removeClass("hide");
+        $( "#show-more" ).on( "click", function() {
+            $( ".product-gallery .img_gallery").toggleClass("visible");
+            $(this).toggleClass("activated");
+        });
+    }
 </script>
-
 </body>
 </html>

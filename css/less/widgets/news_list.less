@@ -35,18 +35,21 @@
             .rgba(#000000; 5%);
             .transition();
         }
-        &:hover {
-            &::after {
-                .rgba(#000000; 0);
-            }
-            img {
-                .scale(1.1);
+        @media only screen and (min-width : @responsive-size-tablet) {
+            &:hover {
+                &::after {
+                    .rgba(#000000; 0%);
+                }
+                img {
+                    .scale(1.1);
+                }
             }
         }
     }
 
     .news-item-title {
         display: block;
+        line-height: 1;
         //@media only screen and (max-width : @responsive-size-tablet) {
         //    margin-top: 1.5em !important;
         //}
@@ -94,9 +97,12 @@
     .inline-block-wrap();
     .flexbox(false; wrap; stretch);
     .news-item {
-        .grid-elements(2; @grid-margin-width; true; 1; 1);
+        .grid-elements(2; @grid-margin-width; true; 2; 1);
         margin-bottom: 1.5rem;
         border: 1px solid @input-border-color;
+        @media only screen and (max-width : @responsive-size-tablet) {
+            margin-bottom: @grid-margin-width;
+        }
     }
     .news-item-title {
         .rgba(#000000; 2%);
@@ -108,6 +114,10 @@
         font-family: @font-family-headings;
         text-transform: uppercase;
         font-size: 1.2em;
+        @media only screen and (max-width : @responsive-size-tablet) {
+            font-size: 0.8em;
+            line-height: 1.2;
+        }
         //.text-overflow();
         .transition();
         &:hover {
@@ -130,15 +140,18 @@
         }
     }
     .news-text {
-        padding: 1em 1.5em;
-        @media only screen and (min-width : @responsive-size-tablet) {
+        padding: 0 1.5em;
+        @media only screen and (min-width : @responsive-size-desktop) {
+            padding: 1em 1.5em;
             position: absolute;
             right: 0;
             top: 50%;
             .translate(0; -50%);
         }
         .divider {
-            padding-bottom: 0;
+            @media only screen and (min-width : @responsive-size-tablet) {
+                padding-bottom: 0;
+            }
         }
     }
     .news-item-title {
@@ -149,6 +162,11 @@
         margin-bottom: 1.5rem;
         @media only screen and (max-width : @responsive-size-tablet) {
             margin-bottom: 0.5em;
+        }
+    }
+    .news-item-image{
+        @media only screen and (max-width : @responsive-size-tablet) {
+            margin-bottom: 1.5rem;
         }
     }
 }

@@ -5,9 +5,7 @@
     {$template:_head}
 </head>
 <body>
-
 {$template:_header}
-
 <div class="container">
     <section class="grid_12 sp-tp sp-bm">
         <h2 class="text-center icon-needle">
@@ -22,7 +20,6 @@
         {/repeat}
     </section>
 </div>
-
 <section class="parallax height-auto take-from-widget dark-section">
     {$imageonly:special-offers:1902:static}
     <div class="container sp-tp sp-bm">
@@ -41,11 +38,11 @@
         </section>
     </div>
 </section>
-
 {$template:_footer}
 {$template:_mobile elements}
 {$template:_scripts}
 <script src="js/plugin/jquery.cycle2.min.js"></script>
+<script src="js/plugin/jquery.carousel.min.js"></script>
 <script>
     $(".carousel-container .product-list").addClass("carousel").attr({
         "data-visible": "4",

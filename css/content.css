@@ -3602,18 +3602,6 @@ button.active,
   border-color: #f5000d;
   background-color: rgba(0, 0, 0, 0);
 }
-.btn:active,
-button:active,
-[type="submit"]:active,
-[type="button"]:active,
-[type="reset"]:active,
-.btn.active,
-button.active,
-[type="submit"].active,
-[type="button"].active,
-[type="reset"].active {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
-}
 .btn[disabled],
 button[disabled],
 [type="submit"][disabled],
@@ -3826,7 +3814,7 @@ hr.dotted {
   position: relative;
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
-  min-width: 12rem;
+  min-width: 10rem;
 }
 .divider::before,
 .divider::after {
@@ -3842,7 +3830,7 @@ hr.dotted {
 }
 .divider::before {
   bottom: 0;
-  width: 15rem;
+  width: 12rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .divider.white::before {

@@ -197,3 +197,22 @@ footer {
     border-left: 10px solid @brand-primary;
     font-weight: bold;
 }
+
+#show-more{
+    span{
+        &:last-child{
+            display: none;
+        }
+    }
+    &.activated{
+        margin-top: 10px;
+        span{
+            &:first-child{
+                display: none;
+            }
+            &:last-child{
+                display: inline;
+            }
+        }
+    }
+}

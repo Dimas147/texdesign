@@ -23,6 +23,7 @@
 .carousel .carousel-wrap {
   font-size: 0;
   min-width: 100%;
+  text-align: center;
 }
 .carousel .carousel-wrap .carousel-item {
   font-size: 20px;
