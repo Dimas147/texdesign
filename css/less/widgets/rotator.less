@@ -98,7 +98,7 @@
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                width: 15rem;
+                width: 12rem;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.2);
                 .translate(-50%, -50%);
                 z-index: -1;
@@ -178,30 +178,14 @@
         }
     }
     &.top-slider {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         .slide {
             height: 100%;
         }
-    }
-}
-
-.slide-text {
-    margin-top: 50vh;
-    color: @primary-color;
-    .slogan-top {
-        text-transform: uppercase;
-        margin-bottom: 0;
-        color: inherit;
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-        & + .slogan-bottom {
-            margin-top: 0.5em;
-        }
-        &.animated {
-            .animation-delay(0.3s);
-        }
-    }
-    .slogan-bottom {
-        margin-bottom: 0;
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
     }
 }
 

@@ -103,23 +103,17 @@
             }
         }
     }
-    @media only screen and (min-width : @responsive-size-tablet) {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 2rem;
-        z-index: 105;
+    @media only screen and (min-width: @responsive-size-tablet) {
+        position: relative;
+        margin-bottom: 1.5rem;
         text-align: center;
+        z-index: 101;
         .inline-block-wrap(middle; ~'>*'; 1.3rem);
-
         & > li {
-            & + li{
-                margin-left: 2rem;
+            margin-bottom: 1rem;
+            & + li {
+                margin-left: 1rem;
             }
-        }
-
-        .index-page & {
-            bottom: 5.5rem;
         }
     }
 }

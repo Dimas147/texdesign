@@ -62,12 +62,10 @@ extend ' .mobile-menu li' has no matches
 }
 @media only screen and (min-width: 800px) {
   .main_menu {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 2rem;
-    z-index: 105;
+    position: relative;
+    margin-bottom: 1.5rem;
     text-align: center;
+    z-index: 101;
     font-size: 0;
   }
   .main_menu >* {
@@ -75,11 +73,11 @@ extend ' .mobile-menu li' has no matches
     display: inline-block;
     vertical-align: middle;
   }
-  .main_menu > li + li {
-    margin-left: 2rem;
+  .main_menu > li {
+    margin-bottom: 1rem;
   }
-  .index-page .main_menu {
-    bottom: 5.5rem;
+  .main_menu > li + li {
+    margin-left: 1rem;
   }
 }
 .static_menu {
@@ -267,9 +265,34 @@ extend ' .mobile-menu li' has no matches
   pointer-events: none;
 }
 .featureditem.catalog li {
+  margin-left: 2%;
+  margin-right: 0;
+  width: 49%;
   padding: 1em;
   background: #FFF;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.featureditem.catalog li:nth-of-type(2n + 1) {
+  margin-left: 0;
+}
+@media only screen and (max-width: 800px) and (min-width: 481px) {
+  .featureditem.catalog li {
+    width: 49%;
+  }
+  .featureditem.catalog li:nth-of-type(n) {
+    margin-left: 2%;
+  }
+  .featureditem.catalog li:nth-of-type(2n + 1) {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .featureditem.catalog li {
+    width: 100%;
+  }
+  .featureditem.catalog li:nth-of-type(1n + 1) {
+    margin-left: 0;
+  }
 }
 @media only screen and (max-width: 480px) {
   .featureditem.catalog li {
@@ -351,6 +374,7 @@ extend ' .mobile-menu li' has no matches
 @media only screen and (max-width: 800px) {
   .news-item .news-item-date {
     margin-bottom: 0.5em;
+    padding: 0 1em;
   }
 }
 .news-item .news-item-description {
@@ -453,11 +477,11 @@ extend ' .mobile-menu li' has no matches
   margin-top: 2.7rem;
 }
 .news-room .news-text {
-  padding: 0 1.5em;
+  padding: 0 1em;
 }
 @media only screen and (min-width: 1026px) {
   .news-room .news-text {
-    padding: 1em 1.5em;
+    padding: 1em;
     position: absolute;
     right: 0;
     top: 50%;

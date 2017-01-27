@@ -12,17 +12,11 @@ header {
 }
 header .logo {
   text-decoration: none;
-  margin: 0;
+  margin-top: 1.14em;
+  margin-bottom: 1.14em;
+  padding-top: 1.14em;
   text-align: center;
   line-height: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 101;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-filter: blur(0);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 header .logo a {
@@ -38,12 +32,12 @@ header .logo a span {
   display: inherit;
 }
 .index-page header {
-  height: 100%;
+  min-height: 100%;
+  padding: 1px 1px 2.5rem;
 }
-@media only screen and (min-width: 800px) {
-  .index-page header .logo {
-    margin-top: -5.8rem;
-  }
+.index-page header .logo {
+  position: relative;
+  z-index: 101;
 }
 header.parallax {
   background-color: #bbbbbb;
@@ -171,6 +165,24 @@ footer .footer-columns a:hover {
 }
 #show-more.activated span:last-child {
   display: inline;
+}
+.slogan-top,
+.slogan-bottom {
+  position: relative;
+  z-index: 101;
+  text-align: center;
+}
+.slogan-top {
+  color: #FFF;
+  text-transform: uppercase;
+  margin-top: 0;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  margin-bottom: 50px;
+}
+.slogan-bottom {
+  color: #FFF;
+  margin-bottom: 80px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 form::after {
   content: "";
@@ -883,7 +895,7 @@ textarea.resize {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 15rem;
+  width: 12rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -967,29 +979,15 @@ textarea.resize {
     margin-top: 1.5em;
   }
 }
+.cycle-slideshow.top-slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 .cycle-slideshow.top-slider .slide {
   height: 100%;
-}
-.slide-text {
-  margin-top: 50vh;
-  color: #FFF;
-}
-.slide-text .slogan-top {
-  text-transform: uppercase;
-  margin-bottom: 0;
-  color: inherit;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-}
-.slide-text .slogan-top + .slogan-bottom {
-  margin-top: 0.5em;
-}
-.slide-text .slogan-top.animated {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-}
-.slide-text .slogan-bottom {
-  margin-bottom: 0;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 @media only screen and (min-width: 801px) {
   .d-hide,
@@ -1032,14 +1030,6 @@ textarea.resize {
     width: 100%;
     margin-right: 0;
     margin-left: 0;
-  }
-}
-@media only screen and (max-height: 600px) {
-  .index-page header .logo {
-    margin-top: -1rem;
-  }
-  .index-page header .logo .divider {
-    display: none;
   }
 }
 html.mobile,
